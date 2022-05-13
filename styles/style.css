@@ -1,0 +1,16 @@
+/* Fonts */
+@import 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Ubuntu:wght@500&display=swap';
+/* site color palette v0 */
+#binaryRain {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/binaryRain.svg);
+  background-repeat: repeat;
+  transition: filter 1.6s ease;
+}
+
+#binaryRain:hover {
+  filter: brightness(1.7);
+}
+
+/*# sourceMappingURL=style.css.map */
