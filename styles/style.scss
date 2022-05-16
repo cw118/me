@@ -1,4 +1,4 @@
-@use './vars';
+@use './vars' as *;
 
 * {
   margin: 0;
@@ -15,4 +15,47 @@
 
 #binaryRain:hover {
   filter: brightness(1.7);
+}
+
+#mainCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $gray-800;
+  border-radius: 20px;
+  border: solid 4px $gray-300;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
+    color: $heading-text-color;
+  }
+
+  p {
+    font-family: $site-font-family;
+    color: $text-color;
+  }
+
+  /* mobile/default card dimensions */
+  width: 85vw;
+  height: 85vh;
+  padding: $mobile-card-padding;
+
+  @media screen and (min-width: $tablet-starts) {
+    width: 90vw;
+    height: 90vh;
+    padding: $tablet-card-padding;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    width: 95.5vw;
+    height: 87vh;
+    padding: $sm-desktop-card-padding;
+  }
+
+  @media screen and (min-width: $lg-desktop-starts) {
+    width: 94vw;
+    height: 91.1vh;
+    padding: $lg-desktop-card-padding;
+  }
 }

@@ -1,6 +1,12 @@
 /* Fonts */
 @import 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Ubuntu:wght@500&display=swap';
 /* site color palette v0 */
+/* site is mobile first
+ * mobile design/layout is coded first
+ */
+/* media queries */
+/* padding */
+/* z-index */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -16,6 +22,49 @@
 
 #binaryRain:hover {
   filter: brightness(1.7);
+}
+
+#mainCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #262626;
+  border-radius: 20px;
+  border: solid 4px #888077;
+  /* mobile/default card dimensions */
+  width: 85vw;
+  height: 85vh;
+  padding: 1.2rem;
+}
+#mainCard h1, #mainCard h2, #mainCard h3, #mainCard h4, #mainCard h5, #mainCard h6 {
+  font-family: "Space Mono", Consolas, monospace;
+  color: #fff;
+}
+#mainCard p {
+  font-family: Ubuntu, "Trebuchet MS", sans-serif;
+  color: #ccebff;
+}
+@media screen and (min-width: 767px) {
+  #mainCard {
+    width: 90vw;
+    height: 90vh;
+    padding: 1.75rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainCard {
+    width: 95.5vw;
+    height: 87vh;
+    padding: 2rem 2.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #mainCard {
+    width: 94vw;
+    height: 91.1vh;
+    padding: 2.2rem 3rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

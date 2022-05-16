@@ -1,0 +1,21 @@
+/* site is mobile first
+ * mobile design/layout is coded first
+ */
+
+/* media queries */
+$lg-desktop-starts: 1280px;
+$sm-desktop-starts: 1023px;
+$tablet-starts: 767px;
+
+/* padding */
+$lg-desktop-card-padding: 2.2rem 3rem;
+$sm-desktop-card-padding: 2rem 2.6rem;
+$tablet-card-padding: 1.75rem 2.25rem;
+$mobile-card-padding: 1.2rem;
+
+/* z-index */
+$send-to-back: -1;
+$bottom-layer: 100;
+$middle-layer: 200;
+$top-layer: 300;
+$bring-to-front: 9999;

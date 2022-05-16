@@ -3,10 +3,10 @@
 $black: #000;
 $white: #fff;
 
-$main-gray: #333;
-$secondary-gray: #262626;
-$darkgray: #6e675f;
-$lightgray: #888077;
+$gray-300: #888077;
+$gray-500: #6e675f;
+$gray-700: #333;
+$gray-800: #262626;
 
 $main-lightblue: #ccebff;
 $secondary-lightblue: #33adff;
@@ -17,4 +17,5 @@ $darkgreen: #060;
 
 $link-color: $secondary-lightblue;
 $text-color: $main-lightblue;
+$heading-text-color: $white;
 $secondary-text-color: $white;
