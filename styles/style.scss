@@ -1,13 +1,18 @@
 @use './vars';
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #binaryRain {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../assets/binaryRain.svg);
-    background-repeat: repeat;
-    transition: filter 1.6s ease;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/binaryRain.svg);
+  background-repeat: repeat;
+  transition: filter 1.6s ease;
 }
 
 #binaryRain:hover {
-    filter: brightness(1.7);
+  filter: brightness(1.7);
 }
