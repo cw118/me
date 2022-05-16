@@ -41,18 +41,21 @@
   height: 85vh;
   padding: $mobile-card-padding;
 
+  /* tablet dimensions */
   @media screen and (min-width: $tablet-starts) {
     width: 90vw;
     height: 90vh;
     padding: $tablet-card-padding;
   }
 
+  /* small desktop (laptop) dimensions */
   @media screen and (min-width: $sm-desktop-starts) {
     width: 95.5vw;
     height: 87vh;
     padding: $sm-desktop-card-padding;
   }
 
+  /* large desktop dimensions */
   @media screen and (min-width: $lg-desktop-starts) {
     width: 94vw;
     height: 91.1vh;
