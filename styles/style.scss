@@ -5,12 +5,18 @@
   box-sizing: border-box;
 }
 
+.mobile-hidden {
+  display: none;
+}
+
 #binaryRain {
   width: 100vw;
   height: 100vh;
   background-image: url(../assets/binaryRain.svg);
   background-repeat: repeat;
   transition: filter 1.6s ease;
+  position: absolute;
+  z-index: $send-to-back;
 }
 
 #binaryRain:hover {
@@ -22,9 +28,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: $gray-800;
+  background: $gray-700;
   border-radius: 20px;
   border: solid 4px $gray-300;
+  z-index: $top-layer;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
@@ -37,28 +44,90 @@
   }
 
   /* mobile/default card dimensions */
-  width: 85vw;
-  height: 85vh;
+  width: $mobile-card-width;
+  height: $mobile-card-height;
   padding: $mobile-card-padding;
 
   /* tablet dimensions */
   @media screen and (min-width: $tablet-starts) {
-    width: 90vw;
-    height: 90vh;
+    width: $tablet-card-width;
+    height: $tablet-card-height;
     padding: $tablet-card-padding;
   }
 
   /* small desktop (laptop) dimensions */
   @media screen and (min-width: $sm-desktop-starts) {
-    width: 95.5vw;
-    height: 87vh;
+    width: $sm-desktop-card-width;
+    height: $sm-desktop-card-height;
     padding: $sm-desktop-card-padding;
   }
 
   /* large desktop dimensions */
   @media screen and (min-width: $lg-desktop-starts) {
-    width: 94vw;
-    height: 91.1vh;
+    width: $lg-desktop-card-width;
+    height: $lg-desktop-card-height;
     padding: $lg-desktop-card-padding;
   }
+}
+
+#mainNav {
+  background: $gray-800;
+  z-index: $bring-to-front;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  border-top: solid 3px $gray-300;
+  color: $text-color;
+  font-family: $site-font-family;
+  padding: 0rem 0.45rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  /* mobile height */
+  height: 3.4rem;
+
+  /* tablet dimensions */
+  @media screen and (min-width: $tablet-starts) {
+    height: 2.9rem;
+  }
+
+  /* small desktop (laptop) dimensions */
+  @media screen and (min-width: $sm-desktop-starts) {
+    height: 3.85rem;
+    padding: 0rem 0.55rem;
+  }
+
+  /* large desktop dimensions */
+  @media screen and (min-width: $lg-desktop-starts) {
+    height: 3.75rem;
+  }
+
+  #profile-pic {
+    height: 2.85rem;
+
+    @media screen and (min-width: $sm-desktop-starts) {
+      height: 3.1rem;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  span.mobile-hidden {
+    @media screen and (min-width: $tablet-starts) {
+      display: inline;
+    }
+  }
+}
+
+code {
+  font-family: $code-font-family;
 }
