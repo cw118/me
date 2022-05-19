@@ -231,17 +231,25 @@ h3 {
   height: 100%;
 }
 #mainNav #navLinks li a .link-container {
-  height: 100%;
-  padding-top: 50%;
+  height: 3.4rem;
+  line-height: 3.4rem;
 }
 @media screen and (min-width: 767px) {
   #mainNav #navLinks li a .link-container {
-    padding-top: 8.5%;
+    height: 2.9rem;
+    line-height: 2.9rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #navLinks li a .link-container {
+    height: 3.85rem;
+    line-height: 3.85rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #mainNav #navLinks li a .link-container {
-    padding-top: 7.5%;
+    height: 3.75rem;
+    line-height: 3.75rem;
   }
 }
 #mainNav #navLinks li img {

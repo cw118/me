@@ -205,15 +205,22 @@ h3 {
         height: 100%;
         
         .link-container {
-          height: 100%;
-          padding-top: 50%;
+          height: $mobile-nav-height;
+          line-height: $mobile-nav-height;
 
           @media screen and (min-width: $tablet-starts) {
-            padding-top: 8.5%;
+            height: $tablet-nav-height;
+            line-height: $tablet-nav-height;
+          }
+
+          @media screen and (min-width: $sm-desktop-starts) {
+            height: $sm-desktop-nav-height;
+            line-height: $sm-desktop-nav-height;
           }
 
           @media screen and (min-width: $lg-desktop-starts) {
-            padding-top: 7.5%;
+            height: $lg-desktop-nav-height;
+            line-height: $lg-desktop-nav-height;
           }
         }
       }
