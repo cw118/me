@@ -100,6 +100,11 @@ h3 {
     height: $lg-desktop-card-height;
     padding: $lg-desktop-card-padding;
   }
+  
+  /* x-large desktop dimensions */
+  @media screen and (min-width: $xl-desktop-starts) {
+    height: $xl-desktop-card-height;
+  }
 }
 
 #mainNav {
@@ -122,6 +127,11 @@ h3 {
     flex-wrap: wrap;
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   /* mobile height */
   height: 3.4rem;
 
@@ -132,7 +142,7 @@ h3 {
     grid-template-columns: 1.6fr 2.4fr;
   }
 
-  @media screen and (min-width: 820px) {
+  @media screen and (min-width: $lg-tablet-starts) {
     grid-template-columns: 1.52fr 2.48fr;
   }
 
@@ -148,6 +158,11 @@ h3 {
     height: 3.75rem;
   }
 
+  /* x-large desktop dimensions */
+  @media screen and (min-width: $xl-desktop-starts) {
+    grid-template-columns: 2fr 2fr;
+  }
+
   #profile-pic {
     height: 2.5rem;
 
@@ -160,27 +175,27 @@ h3 {
     }
   }
 
-  #copyright {
-    font-weight: 450;
-    font-size: $mobile-md-font-size;
-  }
-
   #navProfile {
-    justify-content: space-evenly;
-    margin-right: 0.2rem;
-    height: 100%;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 0.3rem;
 
     @media screen and (min-width: $tablet-starts) {
-      margin-right: 3.8em;
-    }
-    
-    @media screen and (min-width: $sm-desktop-starts) {
-      margin-right: 43%;
+      padding-left: 0.25rem;
     }
 
-    @media screen and (min-width: $lg-desktop-starts) {
-      margin-right: 51%;
+    #copyright {
+      font-weight: 450;
+      font-size: $mobile-md-font-size;
+      padding: 0.4rem;
+
+      &:hover {
+        color: $link-color;
+      }
+
+      @media screen and (min-width: $tablet-starts) {
+        padding: 0.5rem;
+      }
     }
   }
 
@@ -199,8 +214,6 @@ h3 {
       }
 
       a {
-        text-decoration: none;
-        color: inherit;
         width: 100%;
         height: 100%;
         
@@ -211,6 +224,7 @@ h3 {
           @media screen and (min-width: $tablet-starts) {
             height: $tablet-nav-height;
             line-height: $tablet-nav-height;
+            border-left: solid 0.7px $gray-850;
           }
 
           @media screen and (min-width: $sm-desktop-starts) {

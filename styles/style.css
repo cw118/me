@@ -95,6 +95,7 @@ h3 {
   /* tablet dimensions */
   /* small desktop (laptop) dimensions */
   /* large desktop dimensions */
+  /* x-large desktop dimensions */
 }
 #mainCard h1, #mainCard h2, #mainCard h3, #mainCard h4, #mainCard h5, #mainCard h6 {
   font-family: "Space Mono", Consolas, monospace;
@@ -125,6 +126,11 @@ h3 {
     padding: 2.2rem 3rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  #mainCard {
+    height: 90vh;
+  }
+}
 
 #mainNav {
   background: #262626;
@@ -144,10 +150,15 @@ h3 {
   /* tablet dimensions */
   /* small desktop (laptop) dimensions */
   /* large desktop dimensions */
+  /* x-large desktop dimensions */
 }
 #mainNav > div {
   display: flex;
   flex-wrap: wrap;
+}
+#mainNav a {
+  color: inherit;
+  text-decoration: none;
 }
 @media screen and (min-width: 767px) {
   #mainNav {
@@ -173,6 +184,11 @@ h3 {
     height: 3.75rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  #mainNav {
+    grid-template-columns: 2fr 2fr;
+  }
+}
 #mainNav #profile-pic {
   height: 2.5rem;
 }
@@ -186,29 +202,27 @@ h3 {
     height: 3.1rem;
   }
 }
-#mainNav #copyright {
-  font-weight: 450;
-  font-size: 1.266rem;
-}
 #mainNav #navProfile {
-  justify-content: space-evenly;
-  margin-right: 0.2rem;
-  height: 100%;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 0.3rem;
 }
 @media screen and (min-width: 767px) {
   #mainNav #navProfile {
-    margin-right: 3.8em;
+    padding-left: 0.25rem;
   }
 }
-@media screen and (min-width: 1023px) {
-  #mainNav #navProfile {
-    margin-right: 43%;
-  }
+#mainNav #navProfile #copyright {
+  font-weight: 450;
+  font-size: 1.266rem;
+  padding: 0.4rem;
 }
-@media screen and (min-width: 1280px) {
-  #mainNav #navProfile {
-    margin-right: 51%;
+#mainNav #navProfile #copyright:hover {
+  color: #33adff;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #copyright {
+    padding: 0.5rem;
   }
 }
 #mainNav #navLinks {
@@ -225,8 +239,6 @@ h3 {
   background: #6e675f;
 }
 #mainNav #navLinks li a {
-  text-decoration: none;
-  color: inherit;
   width: 100%;
   height: 100%;
 }
@@ -238,6 +250,7 @@ h3 {
   #mainNav #navLinks li a .link-container {
     height: 2.9rem;
     line-height: 2.9rem;
+    border-left: solid 0.7px #1a1a1a;
   }
 }
 @media screen and (min-width: 1023px) {
