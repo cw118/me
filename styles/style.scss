@@ -5,14 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-size: $mobile-base-font-size;
-
-  @media screen and (min-width: $tablet-starts) {
-    font-size: $base-font-size;
-  }
-}
-
 .mobile-hidden {
   display: none;
 }
@@ -105,6 +97,13 @@ h3 {
   @media screen and (min-width: $xl-desktop-starts) {
     height: $xl-desktop-card-height;
   }
+
+  .regBtn {
+    padding: 0.4rem 0.6rem;
+    font-size: $mobile-md-font-size;
+    font-family: $site-font-family;
+    border-radius: 8px;
+  }
 }
 
 #mainNav {
@@ -184,6 +183,14 @@ h3 {
       padding-left: 0.25rem;
     }
 
+    #profile-pic {
+      filter: brightness(1.1);
+
+      &:hover {
+        filter: brightness(1.25);
+      }
+    }
+
     #copyright {
       font-weight: 450;
       font-size: $mobile-md-font-size;
@@ -197,20 +204,75 @@ h3 {
         padding: 0.5rem;
       }
     }
+
+    #changeLang {
+      padding: 0.2rem 0.4rem;
+      font-size: $small-text;
+      font-family: $site-font-family;
+      background: $gray-100;
+      border: solid 2px $gray-600;
+      border-radius: 5px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      @media screen and (min-width: $tablet-starts) {
+        padding: 0.25rem 0.5rem;
+        font-size: $base-font-size;
+      }
+      
+      @media screen and (min-width: $sm-desktop-starts) {
+        padding: 0.3rem 0.6rem;
+      }
+      
+      @media screen and (min-width: $sm-desktop-starts) {
+        padding: 0.4rem 0.65rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: $gray-200;
+      }
+
+      &:active {
+        background: $gray-300;
+      }
+
+      #mobileLang {
+        @media screen and (min-width: $tablet-starts) {
+          display: none;
+        }
+      }
+
+      #lang {
+        display: none;
+
+        @media screen and (min-width: $tablet-starts) {
+          display: inline;
+        }
+      }
+    }
   }
 
   #navLinks {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     height: 100%;
     text-align: center;
     
     li {
       list-style: none;
       display: inline-block;
+      min-width: max-content;
 
       &:hover {
         background: $gray-500;
+      }
+
+      &.nav-active {
+        background: $black;
       }
 
       a {
@@ -262,4 +324,12 @@ h3 {
 
 code {
   font-family: $code-font-family;
+}
+
+body {
+  font-size: $mobile-base-font-size;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: $base-font-size;
+  }
 }

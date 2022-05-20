@@ -21,10 +21,10 @@ $sm-desktop-card-width: 95.5vw;
 $tablet-card-width: 90vw;
 $mobile-card-width: 85vw;
 
-$xl-desktop-card-height: 90vh;
-$lg-desktop-card-height: 85vh;
+$xl-desktop-card-height: 91vh;
+$lg-desktop-card-height: 92vh;
 $sm-desktop-card-height: 95.8vh;
-$tablet-card-height: 92vh;
+$tablet-card-height: $lg-desktop-card-height;
 $mobile-card-height: 91.1vh;
 
 /* main nav dimensions */

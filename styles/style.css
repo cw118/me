@@ -12,6 +12,7 @@
 /* tablet and desktop typescale based on perfect fourth */
 /* 54.93px */
 /* 22.50px */
+/* 16px */
 /* site is mobile first
  * mobile design/layout is coded first
  */
@@ -23,15 +24,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-size: 100%;
-}
-@media screen and (min-width: 767px) {
-  body {
-    font-size: 1rem;
-  }
 }
 
 .mobile-hidden {
@@ -122,14 +114,20 @@ h3 {
 @media screen and (min-width: 1280px) {
   #mainCard {
     width: 94vw;
-    height: 85vh;
+    height: 92vh;
     padding: 2.2rem 3rem;
   }
 }
 @media screen and (min-width: 1440px) {
   #mainCard {
-    height: 90vh;
+    height: 91vh;
   }
+}
+#mainCard .regBtn {
+  padding: 0.4rem 0.6rem;
+  font-size: 1.266rem;
+  font-family: Ubuntu, "Trebuchet MS", sans-serif;
+  border-radius: 8px;
 }
 
 #mainNav {
@@ -212,6 +210,12 @@ h3 {
     padding-left: 0.25rem;
   }
 }
+#mainNav #navProfile #profile-pic {
+  filter: brightness(1.1);
+}
+#mainNav #navProfile #profile-pic:hover {
+  filter: brightness(1.25);
+}
 #mainNav #navProfile #copyright {
   font-weight: 450;
   font-size: 1.266rem;
@@ -225,18 +229,70 @@ h3 {
     padding: 0.5rem;
   }
 }
+#mainNav #navProfile #changeLang {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9rem;
+  font-family: Ubuntu, "Trebuchet MS", sans-serif;
+  background: #e7e6e4;
+  border: solid 2px #5f5a53;
+  border-radius: 5px;
+}
+#mainNav #navProfile #changeLang a {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #changeLang {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #navProfile #changeLang {
+    padding: 0.3rem 0.6rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #navProfile #changeLang {
+    padding: 0.4rem 0.65rem;
+  }
+}
+#mainNav #navProfile #changeLang:hover {
+  cursor: pointer;
+  background: #b8b3ad;
+}
+#mainNav #navProfile #changeLang:active {
+  background: #888077;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #changeLang #mobileLang {
+    display: none;
+  }
+}
+#mainNav #navProfile #changeLang #lang {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #changeLang #lang {
+    display: inline;
+  }
+}
 #mainNav #navLinks {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   height: 100%;
   text-align: center;
 }
 #mainNav #navLinks li {
   list-style: none;
   display: inline-block;
+  min-width: max-content;
 }
 #mainNav #navLinks li:hover {
   background: #6e675f;
+}
+#mainNav #navLinks li.nav-active {
+  background: #000;
 }
 #mainNav #navLinks li a {
   width: 100%;
@@ -286,6 +342,15 @@ h3 {
 
 code {
   font-family: Consolas, monospace;
+}
+
+body {
+  font-size: 100%;
+}
+@media screen and (min-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
