@@ -5,12 +5,42 @@
   box-sizing: border-box;
 }
 
+.mobile-hidden {
+  display: none;
+}
+
+h1 {
+  font-size: $mobile-xxl-font-size;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: $xl-font-size;
+  }
+}
+
+h2 {
+  font-size: $mobile-xl-font-size;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: $lg-font-size;
+  }
+}
+
+h3 {
+  font-size: $mobile-lg-font-size;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: $md-font-size;
+  }
+}
+
 #binaryRain {
   width: 100vw;
   height: 100vh;
   background-image: url(../assets/binaryRain.svg);
   background-repeat: repeat;
   transition: filter 1.6s ease;
+  position: absolute;
+  z-index: $send-to-back;
 }
 
 #binaryRain:hover {
@@ -22,9 +52,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: $gray-800;
+  background: $gray-700;
   border-radius: 20px;
   border: solid 4px $gray-300;
+  z-index: $top-layer;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
@@ -37,28 +68,268 @@
   }
 
   /* mobile/default card dimensions */
-  width: 85vw;
-  height: 85vh;
+  width: $mobile-card-width;
+  height: $mobile-card-height;
   padding: $mobile-card-padding;
 
   /* tablet dimensions */
   @media screen and (min-width: $tablet-starts) {
-    width: 90vw;
-    height: 90vh;
+    width: $tablet-card-width;
+    height: $tablet-card-height;
     padding: $tablet-card-padding;
   }
 
   /* small desktop (laptop) dimensions */
   @media screen and (min-width: $sm-desktop-starts) {
-    width: 95.5vw;
-    height: 87vh;
+    width: $sm-desktop-card-width;
+    height: $sm-desktop-card-height;
     padding: $sm-desktop-card-padding;
   }
 
   /* large desktop dimensions */
   @media screen and (min-width: $lg-desktop-starts) {
-    width: 94vw;
-    height: 91.1vh;
+    width: $lg-desktop-card-width;
+    height: $lg-desktop-card-height;
     padding: $lg-desktop-card-padding;
+  }
+  
+  /* x-large desktop dimensions */
+  @media screen and (min-width: $xl-desktop-starts) {
+    height: $xl-desktop-card-height;
+  }
+
+  .regBtn {
+    padding: 0.4rem 0.6rem;
+    font-size: $mobile-md-font-size;
+    font-family: $site-font-family;
+    border-radius: 8px;
+  }
+}
+
+#mainNav {
+  background: $gray-800;
+  z-index: $bring-to-front;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  outline: $gray-300 3px solid;
+  color: $secondary-text-color;
+  font-family: $site-font-family;
+  font-size: $mobile-sm-font-size;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* mobile height */
+  height: 3.4rem;
+
+  /* tablet dimensions */
+  @media screen and (min-width: $tablet-starts) {
+    height: 2.9rem;
+    font-size: $sm-font-size;
+    grid-template-columns: 1.6fr 2.4fr;
+  }
+
+  @media screen and (min-width: $lg-tablet-starts) {
+    grid-template-columns: 1.52fr 2.48fr;
+  }
+
+  /* small desktop (laptop) dimensions */
+  @media screen and (min-width: $sm-desktop-starts) {
+    height: 3.85rem;
+    font-size: 1.45rem;
+    grid-template-columns: 1.75fr 2.25fr;
+  }
+
+  /* large desktop dimensions */
+  @media screen and (min-width: $lg-desktop-starts) {
+    height: 3.75rem;
+  }
+
+  /* x-large desktop dimensions */
+  @media screen and (min-width: $xl-desktop-starts) {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  #profile-pic {
+    height: 2.5rem;
+
+    @media screen and (min-width: $tablet-starts) {
+      height: 2.2rem;
+    }
+
+    @media screen and (min-width: $sm-desktop-starts) {
+      height: 3.1rem;
+    }
+  }
+
+  #navProfile {
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.3rem;
+
+    @media screen and (min-width: $tablet-starts) {
+      padding-left: 0.25rem;
+    }
+
+    #profile-pic {
+      filter: brightness(1.1);
+
+      &:hover {
+        filter: brightness(1.25);
+      }
+    }
+
+    #copyright {
+      font-weight: 450;
+      font-size: $mobile-md-font-size;
+      padding: 0.4rem;
+
+      &:hover {
+        color: $link-color;
+      }
+
+      @media screen and (min-width: $tablet-starts) {
+        padding: 0.5rem;
+      }
+    }
+
+    #changeLang {
+      padding: 0.2rem 0.4rem;
+      font-size: $small-text;
+      font-family: $site-font-family;
+      background: $gray-100;
+      border: solid 2px $gray-600;
+      border-radius: 5px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      @media screen and (min-width: $tablet-starts) {
+        padding: 0.25rem 0.5rem;
+        font-size: $base-font-size;
+      }
+      
+      @media screen and (min-width: $sm-desktop-starts) {
+        padding: 0.3rem 0.6rem;
+      }
+      
+      @media screen and (min-width: $sm-desktop-starts) {
+        padding: 0.4rem 0.65rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: $gray-200;
+      }
+
+      &:active {
+        background: $gray-300;
+      }
+
+      #mobileLang {
+        @media screen and (min-width: $tablet-starts) {
+          display: none;
+        }
+      }
+
+      #lang {
+        display: none;
+
+        @media screen and (min-width: $tablet-starts) {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  #navLinks {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    height: 100%;
+    text-align: center;
+    
+    li {
+      list-style: none;
+      display: inline-block;
+      min-width: max-content;
+
+      &:hover {
+        background: $gray-500;
+      }
+
+      &.nav-active {
+        background: $black;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        
+        .link-container {
+          height: $mobile-nav-height;
+          line-height: $mobile-nav-height;
+
+          @media screen and (min-width: $tablet-starts) {
+            height: $tablet-nav-height;
+            line-height: $tablet-nav-height;
+            border-left: solid 0.7px $gray-850;
+          }
+
+          @media screen and (min-width: $sm-desktop-starts) {
+            height: $sm-desktop-nav-height;
+            line-height: $sm-desktop-nav-height;
+          }
+
+          @media screen and (min-width: $lg-desktop-starts) {
+            height: $lg-desktop-nav-height;
+            line-height: $lg-desktop-nav-height;
+          }
+        }
+      }
+      
+      img {
+        margin-top: 0.1rem;
+
+        @media screen and (min-width: $tablet-starts) {
+          margin-right: 0.3rem;
+        }
+        
+        @media screen and (min-width: $sm-desktop-starts) {
+          margin-right: 0.35rem;
+        }
+      }
+    }
+  }
+
+  span.mobile-hidden {
+    @media screen and (min-width: $tablet-starts) {
+      display: inline;
+    }
+  }
+}
+
+code {
+  font-family: $code-font-family;
+}
+
+body {
+  font-size: $mobile-base-font-size;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: $base-font-size;
   }
 }

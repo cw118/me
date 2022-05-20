@@ -3,8 +3,10 @@
  */
 
 /* media queries */
+$xl-desktop-starts: 1440px;
 $lg-desktop-starts: 1280px;
 $sm-desktop-starts: 1023px;
+$lg-tablet-starts: 820px;
 $tablet-starts: 767px;
 
 /* padding */
@@ -12,6 +14,24 @@ $lg-desktop-card-padding: 2.2rem 3rem;
 $sm-desktop-card-padding: 2rem 2.6rem;
 $tablet-card-padding: 1.75rem 2.25rem;
 $mobile-card-padding: 1.2rem;
+
+/* main card dimensions */
+$lg-desktop-card-width: 94vw;
+$sm-desktop-card-width: 95.5vw;
+$tablet-card-width: 90vw;
+$mobile-card-width: 85vw;
+
+$xl-desktop-card-height: 91vh;
+$lg-desktop-card-height: 92vh;
+$sm-desktop-card-height: 95.8vh;
+$tablet-card-height: $lg-desktop-card-height;
+$mobile-card-height: 91.1vh;
+
+/* main nav dimensions */
+$lg-desktop-nav-height: 3.75rem;
+$sm-desktop-nav-height: 3.85rem;
+$tablet-nav-height: 2.9rem;
+$mobile-nav-height: 3.4rem;
 
 /* z-index */
 $send-to-back: -1;

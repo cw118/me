@@ -1,15 +1,60 @@
 /* Fonts */
 @import 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Ubuntu:wght@500&display=swap';
 /* site color palette v0 */
+/* font sizes */
+/* usually 16px */
+/* for tablet and desktop, 18px */
+/* mobile typescale based on major second scale (base of 100%)
+ * see/try it on type-scale.com
+ */
+/* 28.83px */
+/* 18.00px */
+/* tablet and desktop typescale based on perfect fourth */
+/* 54.93px */
+/* 22.50px */
+/* 16px */
 /* site is mobile first
  * mobile design/layout is coded first
  */
 /* media queries */
 /* padding */
+/* main card dimensions */
+/* main nav dimensions */
 /* z-index */
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 1.802rem;
+}
+@media screen and (min-width: 767px) {
+  h1 {
+    font-size: 2.441rem;
+  }
+}
+
+h2 {
+  font-size: 1.602rem;
+}
+@media screen and (min-width: 767px) {
+  h2 {
+    font-size: 1.953rem;
+  }
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+@media screen and (min-width: 767px) {
+  h3 {
+    font-size: 1.563rem;
+  }
 }
 
 #binaryRain {
@@ -18,6 +63,8 @@
   background-image: url(../assets/binaryRain.svg);
   background-repeat: repeat;
   transition: filter 1.6s ease;
+  position: absolute;
+  z-index: -1;
 }
 
 #binaryRain:hover {
@@ -29,13 +76,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #262626;
+  background: #333;
   border-radius: 20px;
   border: solid 4px #888077;
+  z-index: 300;
   /* mobile/default card dimensions */
   width: 85vw;
-  height: 85vh;
+  height: 91.1vh;
   padding: 1.2rem;
+  /* tablet dimensions */
+  /* small desktop (laptop) dimensions */
+  /* large desktop dimensions */
+  /* x-large desktop dimensions */
 }
 #mainCard h1, #mainCard h2, #mainCard h3, #mainCard h4, #mainCard h5, #mainCard h6 {
   font-family: "Space Mono", Consolas, monospace;
@@ -48,22 +100,256 @@
 @media screen and (min-width: 767px) {
   #mainCard {
     width: 90vw;
-    height: 90vh;
+    height: 92vh;
     padding: 1.75rem 2.25rem;
   }
 }
 @media screen and (min-width: 1023px) {
   #mainCard {
     width: 95.5vw;
-    height: 87vh;
+    height: 95.8vh;
     padding: 2rem 2.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #mainCard {
     width: 94vw;
-    height: 91.1vh;
+    height: 92vh;
     padding: 2.2rem 3rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #mainCard {
+    height: 91vh;
+  }
+}
+#mainCard .regBtn {
+  padding: 0.4rem 0.6rem;
+  font-size: 1.266rem;
+  font-family: Ubuntu, "Trebuchet MS", sans-serif;
+  border-radius: 8px;
+}
+
+#mainNav {
+  background: #262626;
+  z-index: 9999;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  outline: #888077 3px solid;
+  color: #fff;
+  font-family: Ubuntu, "Trebuchet MS", sans-serif;
+  font-size: 1.125rem;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  /* mobile height */
+  height: 3.4rem;
+  /* tablet dimensions */
+  /* small desktop (laptop) dimensions */
+  /* large desktop dimensions */
+  /* x-large desktop dimensions */
+}
+#mainNav > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+#mainNav a {
+  color: inherit;
+  text-decoration: none;
+}
+@media screen and (min-width: 767px) {
+  #mainNav {
+    height: 2.9rem;
+    font-size: 1.25rem;
+    grid-template-columns: 1.6fr 2.4fr;
+  }
+}
+@media screen and (min-width: 820px) {
+  #mainNav {
+    grid-template-columns: 1.52fr 2.48fr;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav {
+    height: 3.85rem;
+    font-size: 1.45rem;
+    grid-template-columns: 1.75fr 2.25fr;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #mainNav {
+    height: 3.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #mainNav {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+#mainNav #profile-pic {
+  height: 2.5rem;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #profile-pic {
+    height: 2.2rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #profile-pic {
+    height: 3.1rem;
+  }
+}
+#mainNav #navProfile {
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0.3rem;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile {
+    padding-left: 0.25rem;
+  }
+}
+#mainNav #navProfile #profile-pic {
+  filter: brightness(1.1);
+}
+#mainNav #navProfile #profile-pic:hover {
+  filter: brightness(1.25);
+}
+#mainNav #navProfile #copyright {
+  font-weight: 450;
+  font-size: 1.266rem;
+  padding: 0.4rem;
+}
+#mainNav #navProfile #copyright:hover {
+  color: #33adff;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #copyright {
+    padding: 0.5rem;
+  }
+}
+#mainNav #navProfile #changeLang {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9rem;
+  font-family: Ubuntu, "Trebuchet MS", sans-serif;
+  background: #e7e6e4;
+  border: solid 2px #5f5a53;
+  border-radius: 5px;
+}
+#mainNav #navProfile #changeLang a {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #changeLang {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #navProfile #changeLang {
+    padding: 0.3rem 0.6rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #navProfile #changeLang {
+    padding: 0.4rem 0.65rem;
+  }
+}
+#mainNav #navProfile #changeLang:hover {
+  cursor: pointer;
+  background: #b8b3ad;
+}
+#mainNav #navProfile #changeLang:active {
+  background: #888077;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #changeLang #mobileLang {
+    display: none;
+  }
+}
+#mainNav #navProfile #changeLang #lang {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navProfile #changeLang #lang {
+    display: inline;
+  }
+}
+#mainNav #navLinks {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  height: 100%;
+  text-align: center;
+}
+#mainNav #navLinks li {
+  list-style: none;
+  display: inline-block;
+  min-width: max-content;
+}
+#mainNav #navLinks li:hover {
+  background: #6e675f;
+}
+#mainNav #navLinks li.nav-active {
+  background: #000;
+}
+#mainNav #navLinks li a {
+  width: 100%;
+  height: 100%;
+}
+#mainNav #navLinks li a .link-container {
+  height: 3.4rem;
+  line-height: 3.4rem;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navLinks li a .link-container {
+    height: 2.9rem;
+    line-height: 2.9rem;
+    border-left: solid 0.7px #1a1a1a;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #navLinks li a .link-container {
+    height: 3.85rem;
+    line-height: 3.85rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #mainNav #navLinks li a .link-container {
+    height: 3.75rem;
+    line-height: 3.75rem;
+  }
+}
+#mainNav #navLinks li img {
+  margin-top: 0.1rem;
+}
+@media screen and (min-width: 767px) {
+  #mainNav #navLinks li img {
+    margin-right: 0.3rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainNav #navLinks li img {
+    margin-right: 0.35rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  #mainNav span.mobile-hidden {
+    display: inline;
+  }
+}
+
+code {
+  font-family: Consolas, monospace;
+}
+
+body {
+  font-size: 100%;
+}
+@media screen and (min-width: 767px) {
+  body {
+    font-size: 1rem;
   }
 }
 
