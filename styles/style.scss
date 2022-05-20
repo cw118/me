@@ -5,6 +5,23 @@
   box-sizing: border-box;
 }
 
+body {
+  font-size: $mobile-base-font-size;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: $base-font-size;
+  }
+
+  /* scrollbar styles for Blink and WebKit */
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* for Firefox */
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
 .mobile-hidden {
   display: none;
 }
@@ -33,6 +50,14 @@ h3 {
   }
 }
 
+a {
+  color: $link-color;
+}
+
+img {
+  border-radius: 4.5px;
+}
+
 #binaryRain {
   width: 100vw;
   height: 100vh;
@@ -56,15 +81,28 @@ h3 {
   border-radius: 20px;
   border: solid 4px $gray-300;
   z-index: $top-layer;
+  overflow: scroll;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
     color: $heading-text-color;
+    line-height: $heading-line-height;
   }
 
   p {
     font-family: $site-font-family;
+    font-size: $mobile-sm-font-size;
     color: $text-color;
+    padding: 0.25rem;
+    line-height: $site-line-height;
+
+    @media screen and (min-width: $tablet-starts) {
+      font-size: $sm-font-size;
+    }
+
+    @media screen and (min-width: $sm-desktop-starts) {
+      font-size: $md-font-size;
+    }
   }
 
   /* mobile/default card dimensions */
@@ -77,6 +115,10 @@ h3 {
     width: $tablet-card-width;
     height: $tablet-card-height;
     padding: $tablet-card-padding;
+  }
+
+  @media screen and (min-width: $lg-tablet-starts) {
+    padding: $lg-tablet-card-padding;
   }
 
   /* small desktop (laptop) dimensions */
@@ -103,6 +145,77 @@ h3 {
     font-size: $mobile-md-font-size;
     font-family: $site-font-family;
     border-radius: 8px;
+  }
+
+  .reg-img {
+    width: 100%;
+
+    @media screen and (min-width: $tablet-starts) {
+      width: 80%;
+    }
+    
+    @media screen and (min-width: $sm-desktop-starts) {
+      width: 70%;
+    }
+    
+    @media screen and (min-width: $sm-desktop-starts) {
+      width: 60%;
+    }
+    
+    @media screen and (min-width: $lg-desktop-starts) {
+      width: 52.5%;
+    }
+  }
+
+  .img-centered {
+    margin: 0.7rem auto;
+    display: block;
+  }
+
+  .md-img {
+    width: 75%;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .lg-img {
+    width: 85%;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+
+    @media screen and (min-width: $sm-desktop-starts) {
+      width: 80%;
+    }
+  }
+
+  .fullw-img {
+    width: 100%;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .mt-1 {
+    margin-top: 0.25rem;
+  }
+
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  .mt-3 {
+    margin-top: 0.75rem;
+  }
+  
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  #profile-header {
+    border: solid 2px $lime;
   }
 }
 
@@ -326,10 +439,3 @@ code {
   font-family: $code-font-family;
 }
 
-body {
-  font-size: $mobile-base-font-size;
-
-  @media screen and (min-width: $tablet-starts) {
-    font-size: $base-font-size;
-  }
-}

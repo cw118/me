@@ -1,5 +1,5 @@
 /* Fonts */
-@import 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Ubuntu:wght@500&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Ubuntu:wght@450&display=swap';
 /* site color palette v0 */
 /* font sizes */
 /* usually 16px */
@@ -24,6 +24,22 @@
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  /* scrollbar styles for Blink and WebKit */
+  /* for Firefox */
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+@media screen and (min-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
+}
+body *::-webkit-scrollbar {
+  display: none;
 }
 
 .mobile-hidden {
@@ -57,6 +73,14 @@ h3 {
   }
 }
 
+a {
+  color: #33adff;
+}
+
+img {
+  border-radius: 4.5px;
+}
+
 #binaryRain {
   width: 100vw;
   height: 100vh;
@@ -80,10 +104,11 @@ h3 {
   border-radius: 20px;
   border: solid 4px #888077;
   z-index: 300;
+  overflow: scroll;
   /* mobile/default card dimensions */
   width: 85vw;
   height: 91.1vh;
-  padding: 1.2rem;
+  padding: 0.5rem 1rem 1.75rem;
   /* tablet dimensions */
   /* small desktop (laptop) dimensions */
   /* large desktop dimensions */
@@ -92,30 +117,49 @@ h3 {
 #mainCard h1, #mainCard h2, #mainCard h3, #mainCard h4, #mainCard h5, #mainCard h6 {
   font-family: "Space Mono", Consolas, monospace;
   color: #fff;
+  line-height: 1.2;
 }
 #mainCard p {
   font-family: Ubuntu, "Trebuchet MS", sans-serif;
+  font-size: 1.125rem;
   color: #ccebff;
+  padding: 0.25rem;
+  line-height: 1.75;
+}
+@media screen and (min-width: 767px) {
+  #mainCard p {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainCard p {
+    font-size: 1.563rem;
+  }
 }
 @media screen and (min-width: 767px) {
   #mainCard {
     width: 90vw;
     height: 92vh;
-    padding: 1.75rem 2.25rem;
+    padding: 0.75rem 2rem 1rem;
+  }
+}
+@media screen and (min-width: 820px) {
+  #mainCard {
+    padding: 1rem 2.4rem 3.6rem;
   }
 }
 @media screen and (min-width: 1023px) {
   #mainCard {
     width: 95.5vw;
     height: 95.8vh;
-    padding: 2rem 2.6rem;
+    padding: 1rem 2.4rem 3.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #mainCard {
     width: 94vw;
     height: 92vh;
-    padding: 2.2rem 3rem;
+    padding: 1.25rem 2.8rem 3.25rem;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -128,6 +172,71 @@ h3 {
   font-size: 1.266rem;
   font-family: Ubuntu, "Trebuchet MS", sans-serif;
   border-radius: 8px;
+}
+#mainCard .reg-img {
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  #mainCard .reg-img {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainCard .reg-img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #mainCard .reg-img {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #mainCard .reg-img {
+    width: 52.5%;
+  }
+}
+#mainCard .img-centered {
+  margin: 0.7rem auto;
+  display: block;
+}
+#mainCard .md-img {
+  width: 75%;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+#mainCard .lg-img {
+  width: 85%;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+@media screen and (min-width: 1023px) {
+  #mainCard .lg-img {
+    width: 80%;
+  }
+}
+#mainCard .fullw-img {
+  width: 100%;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+#mainCard .mt-1 {
+  margin-top: 0.25rem;
+}
+#mainCard .mt-2 {
+  margin-top: 0.5rem;
+}
+#mainCard .mt-3 {
+  margin-top: 0.75rem;
+}
+#mainCard .mt-4 {
+  margin-top: 1rem;
+}
+#mainCard .align-right {
+  text-align: right;
+}
+#mainCard #profile-header {
+  border: solid 2px #009900;
 }
 
 #mainNav {
@@ -342,15 +451,6 @@ h3 {
 
 code {
   font-family: Consolas, monospace;
-}
-
-body {
-  font-size: 100%;
-}
-@media screen and (min-width: 767px) {
-  body {
-    font-size: 1rem;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
