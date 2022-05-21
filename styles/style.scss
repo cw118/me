@@ -12,14 +12,27 @@ body {
     font-size: $base-font-size;
   }
 
-  /* scrollbar styles for Blink and WebKit */
-  *::-webkit-scrollbar {
-    display: none;
-  }
+  /* scrollbar styles for Firefox */
+  scrollbar-color: $gray-500 transparent;
+  scrollbar-width: thin;
+}
 
-  /* for Firefox */
-  scrollbar-width: none;
-  scrollbar-color: transparent transparent;
+button {
+  border: 0px;
+}
+
+/* scrollbar styles for Blink and WebKit */
+*::-webkit-scrollbar {
+  width: 9.5px;
+}
+
+*::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $gray-400;
+  border: 1.5px solid $gray-850;
 }
 
 .mobile-hidden {
@@ -78,7 +91,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   background: $gray-700;
-  border-radius: 20px;
+  border-radius: 20px 5px 5px 20px;
   border: solid 4px $gray-300;
   z-index: $top-layer;
   overflow: scroll;
@@ -147,9 +160,13 @@ img {
     border-radius: 8px;
   }
 
-  .reg-img {
+  img {
     width: 100%;
+    margin-top: $img-default-margin;
+    margin-bottom: $img-default-margin;
+  }
 
+  .reg-img {
     @media screen and (min-width: $tablet-starts) {
       width: 80%;
     }
@@ -168,30 +185,24 @@ img {
   }
 
   .img-centered {
-    margin: 0.7rem auto;
+    margin: $img-default-margin auto;
     display: block;
   }
 
   .md-img {
-    width: 75%;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
+    @media screen and (min-width: $tablet-starts) {
+      width: 75%;
+    }
   }
   
   .lg-img {
-    width: 85%;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
+    @media screen and (min-width: $tablet-starts) {
+      width: 85%;
+    }
 
     @media screen and (min-width: $sm-desktop-starts) {
       width: 80%;
     }
-  }
-
-  .fullw-img {
-    width: 100%;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
   }
 
   .mt-1 {
@@ -212,6 +223,41 @@ img {
 
   .align-right {
     text-align: right;
+  }
+  
+  .grid-container {
+    display: grid;
+
+    .img-right {
+      justify-self: right;
+    }
+  }
+
+  .light-gray-shadow {
+    box-shadow: $light-gray-shadow;
+  }
+
+  #home-icons {
+    grid-template-areas: ". b . d"
+                         "a b c d"
+                         "a b c d"
+                         "a . c .";
+    
+    #math-icon {
+      grid-area: a;
+    }
+
+    #code-icon {
+      grid-area: b;
+    }
+
+    #tech-icon {
+      grid-area: c;
+    }
+
+    #science-icon {
+      grid-area: d;
+    }
   }
 
   #profile-header {
@@ -319,29 +365,15 @@ img {
     }
 
     #changeLang {
-      padding: 0.2rem 0.4rem;
+      padding: 0;
       font-size: $small-text;
       font-family: $site-font-family;
       background: $gray-100;
-      border: solid 2px $gray-600;
       border-radius: 5px;
 
       a {
         text-decoration: none;
         color: inherit;
-      }
-
-      @media screen and (min-width: $tablet-starts) {
-        padding: 0.25rem 0.5rem;
-        font-size: $base-font-size;
-      }
-      
-      @media screen and (min-width: $sm-desktop-starts) {
-        padding: 0.3rem 0.6rem;
-      }
-      
-      @media screen and (min-width: $sm-desktop-starts) {
-        padding: 0.4rem 0.65rem;
       }
 
       &:hover {
@@ -351,6 +383,25 @@ img {
 
       &:active {
         background: $gray-300;
+      }
+
+      #langWrapper {
+        padding: 0.2rem 0.4rem;
+        border: solid 2px $gray-600;
+        border-radius: 5px;
+
+        @media screen and (min-width: $tablet-starts) {
+          padding: 0.25rem 0.5rem;
+          font-size: $base-font-size;
+        }
+        
+        @media screen and (min-width: $sm-desktop-starts) {
+          padding: 0.3rem 0.6rem;
+        }
+        
+        @media screen and (min-width: $sm-desktop-starts) {
+          padding: 0.4rem 0.65rem;
+        }
       }
 
       #mobileLang {
@@ -399,7 +450,7 @@ img {
           @media screen and (min-width: $tablet-starts) {
             height: $tablet-nav-height;
             line-height: $tablet-nav-height;
-            border-left: solid 0.7px $gray-850;
+            border-left: solid 0.8px $gray-850;
           }
 
           @media screen and (min-width: $sm-desktop-starts) {
