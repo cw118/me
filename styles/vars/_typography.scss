@@ -9,7 +9,7 @@ $site-font-family: Ubuntu, $site-font-family-fallback;
 
 $code-font-family: $heading-font-family-fallback;
 
-/* font sizes */
+/* font sizes and line heights */
 $mobile-base-font-size: 100%; /* usually 16px */
 $base-font-size: 1rem; /* for tablet and desktop, 18px */
 $site-line-height: 1.75;
@@ -31,4 +31,5 @@ $lg-font-size: 1.953rem;
 $md-font-size: 1.563rem;
 $sm-font-size: 1.25rem; /* 22.50px */
 
-$small-text: 0.9rem; /* 16px */
+$small-text: 1.15rem;
+$xs-text: 0.9rem; /* 16px */
