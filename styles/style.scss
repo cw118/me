@@ -364,6 +364,7 @@ img {
 
       input, textarea {
         font-size: $small-text;
+        font-family: $site-font-family;
         border: solid 2px $secondary-lightblue;
         border-radius: 3px;
         padding: 0.11rem;
