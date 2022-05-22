@@ -95,6 +95,7 @@ img {
   border: solid 4px $gray-300;
   z-index: $top-layer;
   overflow: scroll;
+  scroll-behavior: smooth;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
@@ -116,6 +117,12 @@ img {
     @media screen and (min-width: $sm-desktop-starts) {
       font-size: $md-font-size;
     }
+  }
+
+  label {
+    font-family: $site-font-family;
+    color: $text-color;
+    font-size: $small-text;
   }
 
   /* mobile/default card dimensions */
@@ -155,9 +162,21 @@ img {
 
   .regBtn {
     padding: 0.4rem 0.6rem;
-    font-size: $mobile-md-font-size;
+    font-size: $mobile-sm-font-size;
     font-family: $site-font-family;
     border-radius: 8px;
+    background: $gray-100;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-starts) {
+      font-size: $sm-font-size;
+    }
+
+    &:hover {
+      background: $gray-300;
+      cursor: pointer;
+    }
   }
 
   img {
@@ -221,6 +240,34 @@ img {
     margin-top: 1rem;
   }
 
+  .mt-5 {
+    margin-top: 1.25rem;
+  }
+  
+  .mb-1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mb-3 {
+    margin-bottom: 0.75rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
   .align-right {
     text-align: right;
   }
@@ -262,6 +309,80 @@ img {
 
   #profile-header {
     border: solid 2px $lime;
+  }
+
+  #contact {
+    margin-bottom: 1.5rem;
+
+    h1 > a {
+      color: $heading-text-color;
+    }
+
+    p {
+      @media screen and (min-width: $sm-desktop-starts) {
+        font-size: $sm-font-size;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: revert;
+      }
+    }
+
+    #contact-form {
+      @media screen and (min-width: $tablet-starts) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+      }
+
+      #name-email {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 0.75rem;
+      
+        input {
+          width: 100%;
+          margin-top: 0.75rem;
+        }
+      }
+
+      #message-input {
+        @media screen and (max-width: calc($tablet-starts - 1px)) {
+          margin-top: 0.75rem;
+        }
+      }
+
+      textarea#message {
+        resize: none;
+        width: 100%;
+        height: calc(100% - $small-text - 0.75rem);
+        margin-top: 0.75rem;
+      }
+
+      input, textarea {
+        font-size: $small-text;
+        font-family: $site-font-family;
+        border: solid 2px $secondary-lightblue;
+        border-radius: 3px;
+        padding: 0.11rem;
+
+        @media screen and (min-width: $tablet-starts) {
+          padding: 0.25rem;
+        }
+      }
+    }
+
+    #submit-form {
+      display: flex;
+      justify-content: center;
+
+      input[type="submit"] {
+        margin-top: 1.5rem;
+      }
+    }
   }
 }
 
@@ -429,7 +550,6 @@ img {
     li {
       list-style: none;
       display: inline-block;
-      min-width: max-content;
 
       &:hover {
         background: $gray-500;

@@ -7,6 +7,7 @@
     <meta name="description" content="Le site web personnel de Carolyn Wu">
     <title>Accueil | Carolyn Wu</title>
 
+    <script src="https://kit.fontawesome.com/d4a72e9209.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="icon" type="image/png" href="../assets/favicon/favicon-32x32.png">
   </head>
@@ -27,20 +28,20 @@
       </div>
       <div id="navLinks">
         <li class="nav-active"><a href="/fr">
-            <div class="link-container"><img src="../assets/icons/nav-home-icon.svg"><span class="mobile-hidden">Accueil</span>
+            <div class="link-container"><i class="fa-solid fa-house"></i> <span class="mobile-hidden">Accueil</span>
             </div>
           </a></li>
         <li><a href="/fr/skills">
-            <div class="link-container"><img src="../assets/icons/nav-skills-icon.svg"><span
+            <div class="link-container"><i class="fa-solid fa-screwdriver-wrench"></i> <span
                 class="mobile-hidden">Compétences</span></div>
           </a></li>
         <li><a href="/fr/projects">
-            <div class="link-container"><img src="../assets/icons/nav-projects-icon.svg"><span
-                class="mobile-hidden">Projets</span></div>
+            <div class="link-container"><i class="fa-solid fa-briefcase"></i> <span class="mobile-hidden">Projets</span>
+            </div>
           </a></li>
         <li><a href="#contact">
-            <div class="link-container"><img src="../assets/icons/nav-contact-icon.svg"><span
-                class="mobile-hidden">Contact</span></div>
+            <div class="link-container"><i class="fa-solid fa-address-book"></i> <span class="mobile-hidden">Contact</span>
+            </div>
           </a></li>
       </div>
     </nav>
@@ -66,6 +67,35 @@
       <p class="mt-3 align-right">Étant polyglotte avec plusieurs expériences internationales, l'apprentissage des langues, ainsi que les
       cultures dont elles tirent leurs origines, me fascinent beaucoup. J'aime bien la musique et le patinage artistique
       aussi.</p>
+      <div id="contact">
+        <h1 class="align-center mt-5"><a href="#contact">Contactez-moi</a></h1>
+        <p class="align-center mb-2"><em>Retrouvez-moi sur&nbsp;:</em> <a href="https://github.com/cw118" target="_blank"><i class="fa-brands fa-github"></i> GitHub (<code>@cw118</code>)</a></p>
+        <form method="post">
+          <div class="grid-container" id="contact-form">
+            <div id="name-email">
+              <div>
+                <label for="first-name">Prénom*&nbsp;:</label><br>
+                <input type="text" name="first-name" required>
+              </div>
+              <div>
+                <label for="last-name">Nom*&nbsp;:</label><br>
+                <input type="text" name="last-name" required>
+              </div>
+              <div>
+                <label for="email-address">E-mail*&nbsp;:</label><br>
+                <input type="email" name="email-address" required>
+              </div>
+            </div>
+            <div id="message-input">
+              <label for="message">Message*&nbsp;:</label><br>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+          </div>
+          <div id="submit-form">
+            <input type="submit" value="Envoyer" class="regBtn">
+          </div>
+        </form>
+      </div>
     </div>
     <div id="binaryRain"></div>
   </body>
