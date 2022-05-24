@@ -1,5 +1,6 @@
 /* Fonts */
 @import 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Ubuntu:wght@450&display=swap';
+/* transitions */
 /* site is mobile first
  * mobile design/layout is coded first
  */
@@ -40,7 +41,7 @@ body {
 }
 
 button {
-  border: 0px;
+  padding: 0px;
 }
 
 /* scrollbar styles for Blink and WebKit */
@@ -189,22 +190,34 @@ img {
   }
 }
 #mainCard .regBtn {
-  padding: 0.4rem 0.6rem;
   font-size: 1.125rem;
   font-family: Ubuntu, "Trebuchet MS", sans-serif;
   border-radius: 8px;
+  border: solid 2px #000;
   background: #e7e6e4;
-  padding: 0.5rem 0.75rem;
   text-align: center;
+  transition: box-shadow 0.35s;
 }
-@media screen and (min-width: 767px) {
+#mainCard .regBtn a {
+  text-decoration: none;
+  color: #000;
+}
+@media screen and (max-width: 1022px) {
+  #mainCard .regBtn:active {
+    background: #ffcc00;
+  }
+}
+@media screen and (min-width: 1023px) {
   #mainCard .regBtn {
     font-size: 1.25rem;
   }
+  #mainCard .regBtn:hover {
+    box-shadow: inset 6.5em 0 0 0 #ffcc00;
+    cursor: pointer;
+  }
 }
-#mainCard .regBtn:hover {
-  background: #888077;
-  cursor: pointer;
+#mainCard .regBtn .btn-link-container {
+  padding: 0.5rem 0.9rem;
 }
 #mainCard img {
   width: 100%;
@@ -230,6 +243,49 @@ img {
   #mainCard .reg-img {
     width: 52.5%;
   }
+}
+#mainCard #landing-container {
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+#mainCard #choose-lang {
+  display: grid;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
+  row-gap: 1rem;
+  border-top: solid 1px #7b736b;
+  border-bottom: solid 1px #7b736b;
+}
+@media screen and (min-width: 1023px) {
+  #mainCard #choose-lang {
+    grid-template-areas: ". a a a a ." ". . b c . ." ". . b c . .";
+    column-gap: 2rem;
+  }
+  #mainCard #choose-lang button {
+    width: auto;
+    height: max-content;
+  }
+  #mainCard #choose-lang button:hover {
+    box-shadow: none;
+    background: #009900;
+  }
+  #mainCard #choose-lang p {
+    grid-area: a;
+  }
+  #mainCard #choose-lang p ~ button {
+    grid-area: b;
+  }
+  #mainCard #choose-lang button ~ button {
+    grid-area: c;
+  }
+}
+#mainCard #choose-lang ~ p a {
+  text-decoration: none;
+}
+#mainCard #choose-lang ~ p a:hover {
+  text-decoration: revert;
 }
 #mainCard .img-centered {
   margin: 0.7rem auto;
@@ -358,6 +414,7 @@ img {
 }
 #mainCard #contact #contact-form input, #mainCard #contact #contact-form textarea {
   font-size: 1.15rem;
+  font-family: Ubuntu, "Trebuchet MS", sans-serif;
   border: solid 2px #33adff;
   border-radius: 3px;
   padding: 0.11rem;
@@ -373,6 +430,7 @@ img {
 }
 #mainCard #contact #submit-form input[type=submit] {
   margin-top: 1.5rem;
+  padding: 0.5rem 0.9rem;
 }
 
 #mainNav {
@@ -480,6 +538,8 @@ img {
   font-family: Ubuntu, "Trebuchet MS", sans-serif;
   background: #e7e6e4;
   border-radius: 5px;
+  border: 0px;
+  transition: box-shadow 0.35s;
 }
 #mainNav #navProfile #changeLang a {
   text-decoration: none;
@@ -487,7 +547,8 @@ img {
 }
 #mainNav #navProfile #changeLang:hover {
   cursor: pointer;
-  background: #b8b3ad;
+  box-shadow: inset 0 0 0 2em #5f5a53;
+  color: white;
 }
 #mainNav #navProfile #changeLang:active {
   background: #888077;
@@ -496,6 +557,9 @@ img {
   padding: 0.2rem 0.4rem;
   border: solid 2px #5f5a53;
   border-radius: 5px;
+}
+#mainNav #navProfile #changeLang #langWrapper:hover {
+  border: solid 2px #e7e6e4;
 }
 @media screen and (min-width: 767px) {
   #mainNav #navProfile #changeLang #langWrapper {

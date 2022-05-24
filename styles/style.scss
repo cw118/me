@@ -18,7 +18,7 @@ body {
 }
 
 button {
-  border: 0px;
+  padding: 0px;
 }
 
 /* scrollbar styles for Blink and WebKit */
@@ -161,21 +161,36 @@ img {
   }
 
   .regBtn {
-    padding: 0.4rem 0.6rem;
     font-size: $mobile-sm-font-size;
     font-family: $site-font-family;
     border-radius: 8px;
+    border: solid 2px $black;
     background: $gray-100;
-    padding: 0.5rem 0.75rem;
     text-align: center;
+    transition: box-shadow $btn-transition-time;
 
-    @media screen and (min-width: $tablet-starts) {
-      font-size: $sm-font-size;
+    a {
+      text-decoration: none;
+      color: $black;
     }
 
-    &:hover {
-      background: $gray-300;
-      cursor: pointer;
+    @media screen and (max-width: calc($sm-desktop-starts - 1px)) {
+      &:active {
+        background: $lightorange;
+      }
+    }
+
+    @media screen and (min-width: $sm-desktop-starts) {
+      font-size: $sm-font-size;
+
+      &:hover {
+        box-shadow: inset 6.5em 0 0 0 $lightorange;
+        cursor: pointer;
+      }
+    }
+
+    .btn-link-container {
+      padding: 0.5rem 0.9rem;
     }
   }
 
@@ -200,6 +215,60 @@ img {
     
     @media screen and (min-width: $lg-desktop-starts) {
       width: 52.5%;
+    }
+  }
+
+  #landing-container {
+    align-items: center;
+    align-content: center;
+    height: 100%;
+  }
+
+  #choose-lang {
+    display: grid;
+    text-align: center;
+    padding: 0.4rem 0.6rem;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    row-gap: 1rem;
+    border-top: solid 1px $gray-400;
+    border-bottom: solid 1px $gray-400;
+
+    @media screen and (min-width: $sm-desktop-starts) {
+      grid-template-areas: ". a a a a ."
+                           ". . b c . ."
+                           ". . b c . .";
+      
+      column-gap: 2rem;
+
+      button {
+        width: auto;
+        height: max-content;
+
+        &:hover {
+          box-shadow: none;
+          background: $lime;
+        }
+      }
+
+      p {
+        grid-area: a;
+      }
+
+      p ~ button {
+        grid-area: b;
+      }
+
+      button ~ button {
+        grid-area: c;
+      }
+    }
+
+    &~p a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: revert;
+      }
     }
   }
 
@@ -381,6 +450,7 @@ img {
 
       input[type="submit"] {
         margin-top: 1.5rem;
+        padding: 0.5rem 0.9rem;
       }
     }
   }
@@ -491,6 +561,8 @@ img {
       font-family: $site-font-family;
       background: $gray-100;
       border-radius: 5px;
+      border: 0px;
+      transition: box-shadow $btn-transition-time;
 
       a {
         text-decoration: none;
@@ -499,7 +571,8 @@ img {
 
       &:hover {
         cursor: pointer;
-        background: $gray-200;
+        box-shadow: inset 0 0 0 2em $gray-600;
+        color: white;
       }
 
       &:active {
@@ -510,6 +583,10 @@ img {
         padding: 0.2rem 0.4rem;
         border: solid 2px $gray-600;
         border-radius: 5px;
+
+        &:hover {
+          border: solid 2px $gray-100;
+        }
 
         @media screen and (min-width: $tablet-starts) {
           padding: 0.25rem 0.5rem;
