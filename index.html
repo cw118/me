@@ -7,20 +7,23 @@
     <meta name="description" content="Portfolio website of/le site personnel de Carolyn Wu">
     <title>Hello / Coucou | Carolyn Wu</title>
 
+    <script src="https://kit.fontawesome.com/d4a72e9209.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png">
   </head>
 
   <body>
-    <!-- a11y controls/skip to main here -->
     <div id="mainCard">
-      <h1>Welcome / Bienvenue</h1>
-      <h2>I'm / je suis <code>@cw118</code></h2>
-      <p>Choose a language / sélectionnez une langue</p>
-      <button class="regBtn">English</button>
-      <button class="regBtn">Français</button>
-      <!-- English button on the left, Français on the right -->
-      <!-- Find me on / retrouvez-moi sur GitHub: @cw118 -->
+      <div class="grid-container" id="landing-container">
+        <h1 class="align-center mt-2 mb-3">Welcome / Bienvenue</h1>
+        <h2 class="align-center mb-5">I'm / je suis <code>@cw118</code></h2>
+        <div id="choose-lang">
+          <p class="mt-2 mb-2">Choose a language / sélectionnez une langue…</p>
+          <button class="regBtn"><a href="/en"><div class="btn-link-container">English</div></a></button>
+          <button class="regBtn"><a href="/fr"><div class="btn-link-container">Français</div></a></button>
+        </div>
+        <p class="align-center mt-4"><em>Find me on / retrouvez-moi sur </em> <a href="https://github.com/cw118" target="_blank"><i class="fa-brands fa-github"></i> GitHub (<code>@cw118</code>)</a></p>
+      </div>
     </div>
     <div id="binaryRain"></div>
   </body>
