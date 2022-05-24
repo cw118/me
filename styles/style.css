@@ -258,6 +258,9 @@ img {
   border-top: solid 1px #7b736b;
   border-bottom: solid 1px #7b736b;
 }
+#mainCard #choose-lang button:hover, #mainCard #choose-lang button:active {
+  background: #009900;
+}
 @media screen and (min-width: 1023px) {
   #mainCard #choose-lang {
     grid-template-areas: ". a a a a ." ". . b c . ." ". . b c . .";
