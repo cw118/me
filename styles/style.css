@@ -249,7 +249,12 @@ img {
   align-content: center;
   height: 100%;
 }
-#mainCard #choose-lang {
+@media screen and (max-height: 414px) {
+  #mainCard #landing-container {
+    margin: 1.5rem;
+  }
+}
+#mainCard #landing-container #choose-lang {
   display: grid;
   text-align: center;
   padding: 0.4rem 0.6rem;
@@ -258,36 +263,45 @@ img {
   border-top: solid 1px #7b736b;
   border-bottom: solid 1px #7b736b;
 }
-#mainCard #choose-lang button:hover, #mainCard #choose-lang button:active {
+#mainCard #landing-container #choose-lang button:hover, #mainCard #landing-container #choose-lang button:active {
   background: #009900;
 }
+#mainCard #landing-container #choose-lang p {
+  margin-top: 0.5rem;
+}
+@media screen and (max-height: 415px) {
+  #mainCard #landing-container #choose-lang p {
+    margin: 0;
+  }
+}
 @media screen and (min-width: 1023px) {
-  #mainCard #choose-lang {
+  #mainCard #landing-container #choose-lang {
     grid-template-areas: ". a a a a ." ". . b c . ." ". . b c . .";
     column-gap: 2rem;
   }
-  #mainCard #choose-lang button {
+  #mainCard #landing-container #choose-lang button {
     width: auto;
     height: max-content;
   }
-  #mainCard #choose-lang button:hover {
+  #mainCard #landing-container #choose-lang button:hover {
     box-shadow: none;
     background: #009900;
   }
-  #mainCard #choose-lang p {
+  #mainCard #landing-container #choose-lang p {
     grid-area: a;
+    margin-bottom: 0.3rem;
   }
-  #mainCard #choose-lang p ~ button {
+  #mainCard #landing-container #choose-lang p ~ button {
     grid-area: b;
   }
-  #mainCard #choose-lang button ~ button {
+  #mainCard #landing-container #choose-lang button ~ button {
     grid-area: c;
   }
 }
-#mainCard #choose-lang ~ p a {
+#mainCard #landing-container #choose-lang ~ p a {
   text-decoration: none;
 }
-#mainCard #choose-lang ~ p a:hover {
+#mainCard #landing-container #choose-lang ~ p a:hover {
   text-decoration: revert;
 }
 #mainCard .img-centered {

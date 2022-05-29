@@ -222,61 +222,76 @@ img {
     align-items: center;
     align-content: center;
     height: 100%;
-  }
 
-  #choose-lang {
-    display: grid;
-    text-align: center;
-    padding: 0.4rem 0.6rem;
-    grid-template-rows: 1fr 0.5fr 0.5fr;
-    row-gap: 1rem;
-    border-top: solid 1px $gray-400;
-    border-bottom: solid 1px $gray-400;
-
-    button {
-      &:hover, &:active {
-        background: $lime;
-      }
+    @media screen and (max-height: $mobile-mq-height) {
+      margin: 1.5rem;
     }
 
-    @media screen and (min-width: $sm-desktop-starts) {
-      grid-template-areas: ". a a a a ."
-                           ". . b c . ."
-                           ". . b c . .";
-      
-      column-gap: 2rem;
+    #choose-lang {
+      display: grid;
+      text-align: center;
+      padding: 0.4rem 0.6rem;
+      grid-template-rows: 1fr 0.5fr 0.5fr;
+      row-gap: 1rem;
+      border-top: solid 1px $gray-400;
+      border-bottom: solid 1px $gray-400;
 
       button {
-        width: auto;
-        height: max-content;
-
-        &:hover {
-          box-shadow: none;
+        &:hover, &:active {
           background: $lime;
         }
       }
 
       p {
-        grid-area: a;
+        margin-top: 0.5rem;
+      
+        @media screen and (max-height: calc($mobile-mq-height + 1px)) {
+          margin: 0;
+        }
       }
 
-      p ~ button {
-        grid-area: b;
+      @media screen and (min-width: $sm-desktop-starts) {
+        grid-template-areas: ". a a a a ."
+                            ". . b c . ."
+                            ". . b c . .";
+        
+        column-gap: 2rem;
+
+        button {
+          width: auto;
+          height: max-content;
+
+          &:hover {
+            box-shadow: none;
+            background: $lime;
+          }
+        }
+
+        p {
+          grid-area: a;
+          margin-bottom: 0.3rem;
+        }
+
+        p ~ button {
+          grid-area: b;
+        }
+
+        button ~ button {
+          grid-area: c;
+        }
       }
 
-      button ~ button {
-        grid-area: c;
-      }
-    }
+      &~p a {
+        text-decoration: none;
 
-    &~p a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: revert;
+        &:hover {
+          text-decoration: revert;
+        }
       }
     }
   }
+
+  
 
   .img-centered {
     margin: $img-default-margin auto;
