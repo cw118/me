@@ -17,14 +17,9 @@
   letter-spacing: 0.75px;
 
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 1.7fr 2.3fr;
   align-items: center;
   transition: all 0.3s;
-
-  > div {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   .active {
     background-color: $gray-400;
@@ -38,11 +33,11 @@
   @media screen and (min-width: $tablet-starts) {
     height: 3rem;
     font-size: $sm-font-size;
-    grid-template-columns: 1.6fr 2.4fr;
+    /* grid-template-columns: 1.6fr 2.4fr; */
   }
 
   @media screen and (min-width: $lg-tablet-starts) {
-    grid-template-columns: 1.52fr 2.48fr;
+    /* grid-template-columns: 1.52fr 2.48fr; */
   }
 
   /* small desktop (laptop) dimensions */
@@ -68,10 +63,29 @@
     }
   }
 
-  #profile {
-    justify-content: flex-start;
+  .profile {
+    display: flex;
     align-items: center;
     padding-left: 0.3rem;
+
+    height: $mobile-nav-height;
+    line-height: $mobile-nav-height;
+    border-bottom: solid $white 2px;
+  
+    @media screen and (min-width: $tablet-starts) {
+      height: $tablet-nav-height;
+      line-height: $tablet-nav-height;
+    }
+  
+    @media screen and (min-width: $sm-desktop-starts) {
+      height: $sm-desktop-nav-height;
+      line-height: $sm-desktop-nav-height;
+    }
+  
+    @media screen and (min-width: $lg-desktop-starts) {
+      height: $lg-desktop-nav-height;
+      line-height: $lg-desktop-nav-height;
+    }
 
     @media screen and (min-width: $tablet-starts) {
       padding-left: 0.25rem;
@@ -85,7 +99,7 @@
       }
     }
 
-    #copyright {
+    p {
       font-weight: 450;
       font-size: $mobile-md-font-size;
       padding: 0.4rem;
@@ -140,6 +154,14 @@
   #mobileLang {
     @media screen and (min-width: $tablet-starts) {
       display: none;
+    }
+  }
+
+  #lang {
+    display: none;
+
+    @media screen and (min-width: $tablet-starts) {
+      display: inline-block;
     }
   }
 }

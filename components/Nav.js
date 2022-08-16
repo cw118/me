@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import styles from '../styles/Nav.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Nav = ({ lang, i18nUrl }) => {
   const router = useRouter();
@@ -32,9 +31,9 @@ const Nav = ({ lang, i18nUrl }) => {
   return (
     <nav className={styles.topnav}>
       <div className={styles.profile}>
-        <Link href='/'><>
-          <Image id={styles.profilePic} src="/public/profile.png" alt="cw118" width='55px' height='55px' layout='responsive' />
-          <p id="copyright">Carolyn Wu</p>
+        <Link href={lang ? '/fr/' : '/'}><>
+          <img id={styles.profileIcon} src="/profile.png" alt="cw118" />
+          <p>Carolyn Wu</p>
         </></Link>
         <button id={styles.changeLang}>
           <Link href={i18nUrl}>
@@ -45,7 +44,7 @@ const Nav = ({ lang, i18nUrl }) => {
         </button>
       </div>
       <div className={styles.navLinks}>
-        {navLinks.map((navLink) => <Link href={(lang ? '/fr/' : '/') + navLink.route}><a className={(currentRoute == navLink.route || currentRoute == '/fr' + navLink.route) ? `${styles.active}` : ''}>{lang ? navLink.fr : navLink.title}</a></Link>)}
+        {navLinks.map((navLink) => <Link href={(lang ? '/fr/' : '') + navLink.route}><a className={(currentRoute == navLink.route || currentRoute == '/fr' + navLink.route) ? `${styles.active}` : ''}>{lang ? navLink.fr : navLink.title}</a></Link>)}
       </div>
     </nav>
   );
