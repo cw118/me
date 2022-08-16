@@ -107,11 +107,9 @@
   font-size: 1.125rem;
   font-weight: bold;
   z-index: 999;
-  letter-spacing: 0.75px;
   display: grid;
-  grid-template-columns: 1.7fr 2.3fr;
+  grid-template-columns: 2.1fr 1.9fr;
   align-items: center;
-  transition: all 0.3s;
   /* mobile height */
   height: 3.5rem;
   /* tablet dimensions */
@@ -126,6 +124,8 @@
   .topnav {
     height: 3rem;
     font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    grid-template-columns: 1.7fr 2.3fr;
     /* grid-template-columns: 1.6fr 2.4fr; */
   }
 }
@@ -146,22 +146,25 @@
   }
 }
 .topnav #profileIcon {
-  height: 2.5rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: solid #a09992 1px;
 }
 @media screen and (min-width: 767px) {
   .topnav #profileIcon {
-    height: 2.2rem;
+    height: 2.15rem;
   }
 }
 @media screen and (min-width: 1023px) {
   .topnav #profileIcon {
-    height: 3.1rem;
+    height: 3.05rem;
   }
 }
 .topnav .profile {
   display: flex;
   align-items: center;
   padding-left: 0.3rem;
+  cursor: pointer;
   height: 3.5rem;
   line-height: 3.5rem;
   border-bottom: solid #fff 2px;
@@ -189,21 +192,20 @@
     padding-left: 0.25rem;
   }
 }
-.topnav .profile #profilePic {
-  filter: brightness(1.1);
-}
-.topnav .profile #profilePic:hover {
-  filter: brightness(1.25);
-}
-.topnav .profile p {
+.topnav .profile .name {
   font-weight: 450;
   font-size: 1.266rem;
-  padding: 0.4rem;
+  padding: 0 0.4rem;
+  margin-right: 0.25rem;
 }
 @media screen and (min-width: 767px) {
-  .topnav .profile p {
-    padding: 0.5rem;
+  .topnav .profile .name {
+    padding: 0 0.4rem;
+    letter-spacing: 0.5px;
   }
+}
+.topnav .profile a img {
+  display: block;
 }
 .topnav .navLinks {
   display: grid;
@@ -244,6 +246,20 @@
   background-color: #a09992;
   color: #000;
 }
+.topnav .navLinks .navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topnav .navLinks .linkPage {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  .topnav .navLinks .linkPage {
+    display: inline;
+    margin-left: 0.35em;
+  }
+}
 @media screen and (min-width: 767px) {
   .topnav #mobileLang {
     display: none;
@@ -256,6 +272,42 @@
   .topnav #lang {
     display: inline-block;
   }
+}
+.topnav #changeLang {
+  /* customized from https://uiverse.io/detail/alexroumi/shy-sloth-91 */
+  padding: 5px 10px;
+  border: unset;
+  border-radius: 8px;
+  color: #212121;
+  z-index: 1;
+  background: #dcd9d6;
+  position: relative;
+  font-family: inherit;
+  font-size: 17px;
+  -webkit-box-shadow: 1px 1px 12px -1px #c0c0c0;
+  box-shadow: 1px 1px 12px -1px #c0c0c0;
+  transition: all 250ms;
+  overflow: hidden;
+}
+.topnav #changeLang::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 8px;
+  background-color: #333333;
+  z-index: -1;
+  -webkit-box-shadow: 1px 1px 12px -1px #c0c0c0;
+  box-shadow: 1px 1px 12px -1px #c0c0c0;
+  transition: all 250ms;
+}
+.topnav #changeLang:hover {
+  color: #fff;
+}
+.topnav #changeLang:hover::before {
+  width: 100%;
 }
 
 /*# sourceMappingURL=Nav.module.css.map */
