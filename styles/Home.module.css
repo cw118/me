@@ -1,0 +1,203 @@
+/* Gray */
+/* navlink active */
+/* navlink hover */
+/* navbar/footer bg */
+/* Blue */
+/* footer line break */
+/* Indigo */
+/* Orange */
+/* Turquoise */
+/* Violet */
+/* Goldenrod */
+/* Pink */
+/* Red */
+/* Other/special */
+/* site is mobile first
+ * mobile design/layout is coded first
+ */
+/* media queries */
+/* padding */
+/* margin */
+/* main nav dimensions */
+/* footer height */
+/* z-index */
+/* font sizes and line heights */
+/* usually 16px */
+/* for tablet and desktop, 18px */
+/* mobile typescale based on major second scale (base of 100%)
+ * see/try it on type-scale.com
+ */
+/* 28.83px */
+/* 18.00px */
+/* tablet and desktop typescale based on perfect fourth */
+/* 54.93px */
+/* 22.50px */
+/* 16px */
+/* very light gray */
+/* Styles/mixins for buttons */
+.submitBtn {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.2s;
+  box-shadow: #dcd9d6 0px 8px 24px;
+  font-family: inherit;
+}
+.submitBtn:hover {
+  background-color: #d9d9d9;
+}
+
+.submitBtn {
+  /* customized from https://uiverse.io/detail/adamgiebl/smart-moth-68 */
+  background-color: #003c66;
+  color: #fff;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.266rem;
+}
+@media screen and (min-width: 767px) {
+  .submitBtn {
+    font-size: 1.25rem;
+  }
+}
+.submitBtn:hover {
+  background-color: #0077cc;
+}
+.submitBtn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+.submitBtn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+.submitBtn:hover span {
+  transform: translateX(5em);
+}
+.submitBtn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+.submitBtn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+.submitBtn:active {
+  transform: scale(0.95);
+}
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.hero {
+  position: relative;
+}
+
+.heroImg {
+  background-image: url(/homeHero.png);
+  background-position: left 25% top 25%;
+  opacity: 30%;
+  height: 300px;
+}
+@media screen and (min-width: 767px) {
+  .heroImg {
+    background-position: 10% center;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .heroImg {
+    height: 400px;
+    background-position: center;
+  }
+}
+
+.heroText {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  padding: 3rem 2.1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media screen and (min-width: 767px) {
+  .heroText {
+    padding: 3.95rem 2.2rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .heroText {
+    padding: 5.5rem 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .heroText {
+    padding: 5rem 3rem;
+  }
+}
+
+#name {
+  text-transform: uppercase;
+  padding: 0px;
+  font-size: 2.9rem;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 767px) {
+  #name {
+    font-size: 60px;
+    letter-spacing: 1.2px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #name {
+    font-size: 75px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #name {
+    font-size: 85px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #name {
+    font-size: 90px;
+  }
+}
+
+#summary {
+  font-size: 1.28rem;
+}
+@media screen and (min-width: 767px) {
+  #summary {
+    font-size: 1.45rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #summary {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #summary {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #summary {
+    font-size: 1.8rem;
+  }
+}
+
+/*# sourceMappingURL=Home.module.css.map */

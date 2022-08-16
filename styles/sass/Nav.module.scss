@@ -195,6 +195,7 @@
     box-shadow: 1px 1px 12px -1px $gray-250;
     transition: all 250ms;
     overflow: hidden;
+    cursor: pointer;
 
     &::before {
       content: "";

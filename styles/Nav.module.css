@@ -283,6 +283,7 @@
   box-shadow: 1px 1px 12px -1px #c0c0c0;
   transition: all 250ms;
   overflow: hidden;
+  cursor: pointer;
 }
 .topnav #changeLang::before {
   content: "";
