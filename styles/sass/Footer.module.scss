@@ -6,6 +6,7 @@
 
 .footerContainer {
   position: relative;
+  z-index: $bring-to-front;
 }
 
 .footer {
