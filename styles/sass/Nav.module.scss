@@ -1,0 +1,145 @@
+@import './colors';
+@import './layout';
+@import './typography';
+@import './shadows';
+@import './buttons';
+
+.topnav {
+  background-color: $gray-800;
+  color: $white;
+  border-bottom: solid $white 2px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  font-size: $mobile-sm-font-size;
+  font-weight: bold;
+  z-index: 999;
+  letter-spacing: 0.75px;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  transition: all 0.3s;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .active {
+    background-color: $gray-400;
+    color: $black;
+  }
+
+  /* mobile height */
+  height: 3.5rem;
+
+  /* tablet dimensions */
+  @media screen and (min-width: $tablet-starts) {
+    height: 3rem;
+    font-size: $sm-font-size;
+    grid-template-columns: 1.6fr 2.4fr;
+  }
+
+  @media screen and (min-width: $lg-tablet-starts) {
+    grid-template-columns: 1.52fr 2.48fr;
+  }
+
+  /* small desktop (laptop) dimensions */
+  @media screen and (min-width: $sm-desktop-starts) {
+    height: 3.95rem;
+    font-size: 1.45rem;
+  }
+
+  /* large desktop dimensions */
+  @media screen and (min-width: $lg-desktop-starts) {
+    height: 3.85rem;
+  }
+
+  #profileIcon {
+    height: 2.5rem;
+
+    @media screen and (min-width: $tablet-starts) {
+      height: 2.2rem;
+    }
+
+    @media screen and (min-width: $sm-desktop-starts) {
+      height: 3.1rem;
+    }
+  }
+
+  #profile {
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.3rem;
+
+    @media screen and (min-width: $tablet-starts) {
+      padding-left: 0.25rem;
+    }
+
+    #profilePic {
+      filter: brightness(1.1);
+
+      &:hover {
+        filter: brightness(1.25);
+      }
+    }
+
+    #copyright {
+      font-weight: 450;
+      font-size: $mobile-md-font-size;
+      padding: 0.4rem;
+
+      @media screen and (min-width: $tablet-starts) {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .navLinks {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    height: 100%;
+    text-align: center;
+
+    a {
+      width: 100%;
+      display: inline-block;
+
+      height: $mobile-nav-height;
+      line-height: $mobile-nav-height;
+      border-bottom: solid $white 2px;
+
+      @media screen and (min-width: $tablet-starts) {
+        height: $tablet-nav-height;
+        line-height: $tablet-nav-height;
+      }
+
+      @media screen and (min-width: $sm-desktop-starts) {
+        height: $sm-desktop-nav-height;
+        line-height: $sm-desktop-nav-height;
+      }
+
+      @media screen and (min-width: $lg-desktop-starts) {
+        height: $lg-desktop-nav-height;
+        line-height: $lg-desktop-nav-height;
+      }
+
+      &:hover {
+        background-color: $gray-700;
+        color: $white;
+      }
+
+      .active {
+        background-color: $gray-400;
+        color: $black;
+      }
+    }
+  }
+
+  #mobileLang {
+    @media screen and (min-width: $tablet-starts) {
+      display: none;
+    }
+  }
+}

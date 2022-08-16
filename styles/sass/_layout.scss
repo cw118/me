@@ -1,0 +1,34 @@
+/* site is mobile first
+ * mobile design/layout is coded first
+ */
+
+/* media queries */
+$xl-desktop-starts: 1440px;
+$lg-desktop-starts: 1280px;
+$sm-desktop-starts: 1023px;
+$lg-tablet-starts: 820px;
+$tablet-starts: 767px;
+$mobile-mq-height: 414px;
+
+/* padding */
+$lg-desktop-card-padding: 1.25rem 2.8rem 3.25rem;
+$sm-desktop-card-padding: 1rem 2.4rem 3.5rem;
+$lg-tablet-card-padding: 1rem 2.4rem 3.6rem;
+$tablet-card-padding: 0.75rem 2rem 1rem;
+$mobile-card-padding: 0.5rem 1rem 1.75rem;
+
+/* margin */
+$img-default-margin: 0.7rem;
+
+/* main nav dimensions */
+$lg-desktop-nav-height: 3.85rem;
+$sm-desktop-nav-height: 3.95rem;
+$tablet-nav-height: 3rem;
+$mobile-nav-height: 3.5rem;
+
+/* z-index */
+$send-to-back: -1;
+$bottom-layer: 100;
+$middle-layer: 200;
+$top-layer: 300;
+$bring-to-front: 9999;
