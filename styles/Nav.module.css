@@ -19,6 +19,7 @@
 /* padding */
 /* margin */
 /* main nav dimensions */
+/* footer height */
 /* z-index */
 /* font sizes and line heights */
 /* usually 16px */
@@ -129,20 +130,15 @@
     /* grid-template-columns: 1.6fr 2.4fr; */
   }
 }
-@media screen and (min-width: 820px) {
-  .topnav {
-    /* grid-template-columns: 1.52fr 2.48fr; */
-  }
-}
 @media screen and (min-width: 1023px) {
   .topnav {
-    height: 3.95rem;
+    height: 3.65rem;
     font-size: 1.45rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .topnav {
-    height: 3.85rem;
+    height: 3.75rem;
   }
 }
 .topnav #profileIcon {
@@ -157,14 +153,13 @@
 }
 @media screen and (min-width: 1023px) {
   .topnav #profileIcon {
-    height: 3.05rem;
+    height: 2.6rem;
   }
 }
 .topnav .profile {
   display: flex;
   align-items: center;
   padding-left: 0.3rem;
-  cursor: pointer;
   height: 3.5rem;
   line-height: 3.5rem;
   border-bottom: solid #fff 2px;
@@ -177,14 +172,14 @@
 }
 @media screen and (min-width: 1023px) {
   .topnav .profile {
-    height: 3.95rem;
-    line-height: 3.95rem;
+    height: 3.65rem;
+    line-height: 3.65rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .topnav .profile {
-    height: 3.85rem;
-    line-height: 3.85rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
   }
 }
 @media screen and (min-width: 767px) {
@@ -228,14 +223,14 @@
 }
 @media screen and (min-width: 1023px) {
   .topnav .navLinks a {
-    height: 3.95rem;
-    line-height: 3.95rem;
+    height: 3.65rem;
+    line-height: 3.65rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .topnav .navLinks a {
-    height: 3.85rem;
-    line-height: 3.85rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
   }
 }
 .topnav .navLinks a:hover {
@@ -297,7 +292,7 @@
   height: 100%;
   width: 0;
   border-radius: 8px;
-  background-color: #333333;
+  background-color: #000;
   z-index: -1;
   -webkit-box-shadow: 1px 1px 12px -1px #c0c0c0;
   box-shadow: 1px 1px 12px -1px #c0c0c0;

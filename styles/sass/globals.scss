@@ -12,6 +12,7 @@ body {
   font-family: 'Roboto Condensed', 'Trebuchet MS', 'Segoe UI', Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   color: $black;
   font-size: $mobile-base-font-size;
+  height: 100%;
   
   @media screen and (min-width: $tablet-starts) {
     font-size: $base-font-size;
@@ -34,4 +35,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+main {
+  padding-top: $mobile-nav-height;
+  padding-bottom: $footer-height;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-starts) {
+    padding-top: $tablet-nav-height;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    padding-top: $sm-desktop-nav-height;
+  }
+
+  @media screen and (min-width: $lg-desktop-starts) {
+    padding-top: $lg-desktop-nav-height;
+  }
 }

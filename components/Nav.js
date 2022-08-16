@@ -47,7 +47,7 @@ const Nav = ({ lang }) => {
         </button>
       </div>
       <div className={styles.navLinks}>
-        {navLinks.map((navLink) => <Link href={(lang ? '/fr/' : '') + navLink.route}><a className={`${styles.navLink}` + ((currentRoute == navLink.route || currentRoute == '/fr' + navLink.route) ? ` ${styles.active}` : '')}><NavIcon link={navLink.title} /><span className={styles.linkPage}>{lang ? navLink.fr : navLink.title}</span></a></Link>)}
+        {navLinks.map((navLink) => <Link href={(lang ? '/fr/' : '') + navLink.route} key={lang ? navLink.fr : navLink.title}><a className={`${styles.navLink}` + ((currentRoute == navLink.route || currentRoute == '/fr' + navLink.route) ? ` ${styles.active}` : '')}><NavIcon link={navLink.title} /><span className={styles.linkPage}>{lang ? navLink.fr : navLink.title}</span></a></Link>)}
       </div>
     </nav>
   );
