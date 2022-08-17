@@ -189,6 +189,10 @@
     }
   }
 
+  #changeLangLink {
+    display: flex; /* helps center the button vertically */
+  }
+
   #changeLang {
     /* customized from https://uiverse.io/detail/alexroumi/shy-sloth-91 */
     padding: 5px 10px;

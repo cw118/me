@@ -122,7 +122,7 @@
 }
 @media screen and (min-width: 767px) {
   .topnav {
-    height: 3rem;
+    height: 3.55rem;
     font-size: 1.25rem;
     letter-spacing: 0.75px;
     grid-template-columns: 1.7fr 2.3fr;
@@ -169,8 +169,8 @@
 }
 @media screen and (min-width: 767px) {
   .topnav .nameBrand {
-    height: 3rem;
-    line-height: 3rem;
+    height: 3.55rem;
+    line-height: 3.55rem;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -224,8 +224,8 @@
 }
 @media screen and (min-width: 767px) {
   .topnav .navLinks a {
-    height: 3rem;
-    line-height: 3rem;
+    height: 3.55rem;
+    line-height: 3.55rem;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -274,6 +274,10 @@
   .topnav #lang {
     display: inline-block;
   }
+}
+.topnav #changeLangLink {
+  display: flex;
+  /* helps center the button vertically */
 }
 .topnav #changeLang {
   /* customized from https://uiverse.io/detail/alexroumi/shy-sloth-91 */

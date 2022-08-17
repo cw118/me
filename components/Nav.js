@@ -11,7 +11,7 @@ const Nav = ({ lang }) => {
     {
       title: 'Home',
       fr: 'Accueil',
-      route: '',
+      route: '/',
     },
     {
       title: 'About',
@@ -41,18 +41,18 @@ const Nav = ({ lang }) => {
             <a className={styles.name}>Carolyn Wu</a>
           </Link>
         </div>
-        <button id={styles.changeLang}>
-          <Link href={(lang ? currentRoute.replace('fr', '').replace('//', '/') : '/fr' + currentRoute)}>
-            <a>
+        <Link href={(lang ? currentRoute.replace('fr', '').replace('//', '/') : '/fr' + currentRoute)}>
+          <a id={styles.changeLangLink}>
+            <button id={styles.changeLang}>
               <div id={styles.langWrapper}>
                 <span id={styles.mobileLang}>{lang ? 'EN' : 'FR'}</span><span id={styles.lang}>{lang ? 'English' : 'Français'}</span>
               </div>
-            </a>
-          </Link>
-        </button>
+            </button>
+          </a>
+        </Link>
       </div>
       <div className={styles.navLinks}>
-        {navLinks.map((navLink) => <Link href={(lang ? '/fr' : '') + navLink.route} key={lang ? navLink.fr : navLink.title}><a className={`${styles.navLink}` + ((currentRoute == `/${navLink.route}` || currentRoute == `/fr${navLink.route}`) ? ` ${styles.active}` : '')}><NavIcon link={navLink.title} /><span className={styles.linkPage}>{lang ? navLink.fr : navLink.title}</span></a></Link>)}
+        {navLinks.map((navLink) => <Link href={(lang ? '/fr' : '') + navLink.route} key={lang ? navLink.fr : navLink.title}><a className={`${styles.navLink}` + ((currentRoute == navLink.route || currentRoute == (navLink.route == '/' ? '/fr' : `/fr${navLink.route}`)) ? ` ${styles.active}` : '')}><NavIcon link={navLink.title} /><span className={styles.linkPage}>{lang ? navLink.fr : navLink.title}</span></a></Link>)}
       </div>
     </nav>
   );
