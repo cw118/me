@@ -32,10 +32,14 @@ const Nav = ({ lang }) => {
   return (
     <nav className={styles.topnav}>
       <div className={styles.profile}>
-        <Link href={lang ? '/fr/' : '/'} passHref>
-          <a><img id={styles.profileIcon} src="/profile.png" alt="cw118" /></a>
-        </Link>
-        <Link href={lang ? '/fr/' : '/'} passHref><a className={styles.name}>Carolyn Wu</a></Link>
+        <div className={styles.nameBrand}>
+          <Link href={lang ? '/fr/' : '/'}>
+            <a><img id={styles.profileIcon} src="/profile.png" alt="cw118" /></a>
+          </Link>
+          <Link href={lang ? '/fr/' : '/'}>
+            <a className={styles.name}>Carolyn Wu</a>
+          </Link>
+        </div>
         <button id={styles.changeLang}>
           <Link href={(lang ? '/' : '/fr') + currentRoute}>
             <a>

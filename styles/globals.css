@@ -16,7 +16,6 @@
  * mobile design/layout is coded first
  */
 /* media queries */
-/* padding */
 /* margin */
 /* main nav dimensions */
 /* footer height */
@@ -35,7 +34,7 @@
 /* 16px */
 /* very light gray */
 /* Styles/mixins for buttons */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Ubuntu&display=swap");
 .submitBtn {
   display: inline-block;
   border-radius: 10px;
@@ -106,6 +105,7 @@ body {
   font-family: "Roboto Condensed", "Trebuchet MS", "Segoe UI", Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #000;
   font-size: 100%;
+  font-weight: 400;
   height: 100%;
 }
 @media screen and (min-width: 767px) {

@@ -3,7 +3,7 @@
 @import './typography';
 @import './shadows';
 @import './buttons';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Ubuntu&display=swap');
 
 html,
 body {
@@ -12,6 +12,7 @@ body {
   font-family: 'Roboto Condensed', 'Trebuchet MS', 'Segoe UI', Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   color: $black;
   font-size: $mobile-base-font-size;
+  font-weight: 400;
   height: 100%;
   
   @media screen and (min-width: $tablet-starts) {

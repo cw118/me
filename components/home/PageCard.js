@@ -1,13 +1,15 @@
 import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
+import { BsPersonCircle, BsChatLeftText } from 'react-icons/bs';
+import { FaLaptopCode } from 'react-icons/fa';
 
 export const AboutCard = ({ lang }) => {
   return ( 
     <div className={styles.pageCard}>
       <Link href={(lang ? '/fr' : '') + '/about'}><a>
         <h2 className={styles.cardTitle}>{lang ? 'À propos' : 'About'}</h2>
-        <img src='/icons/about.svg' className={styles.pageIcon} />
-        <h3 className={styles.cardDesc}>{lang ? 'My tech stack and interests' : 'Ma stack technique et mes intérêts'}</h3>
+        <BsPersonCircle size={145} className={styles.pageIcon} />
+        <h3 className={styles.cardDesc}>{lang ? 'Ma stack technique et mes intérêts' : 'My tech stack and interests'}</h3>
       </a></Link>
     </div>
     
@@ -19,8 +21,8 @@ export const ProjectsCard = ({ lang }) => {
     <div className={styles.pageCard}>
       <Link href={(lang ? '/fr' : '') + '/projects'}><a>
         <h2 className={styles.cardTitle}>{lang ? 'Projets' : 'Projects'}</h2>
-        <img src='/icons/projects.svg' className={styles.pageIcon} />
-        <h3 className={styles.cardDesc}>{lang ? 'Past and ongoing creations' : 'Exemples de mes réalisations'}</h3>
+        <FaLaptopCode size={140} className={styles.pageIcon} />
+        <h3 className={styles.cardDesc}>{lang ? 'Exemples de mes réalisations' : 'Past and ongoing creations'}</h3>
       </a></Link>  
     </div>
     
@@ -32,8 +34,8 @@ export const ContactCard = ({ lang }) => {
     <div className={styles.pageCard}>
       <Link href={(lang ? '/fr' : '') + '/contact'}><a>
         <h2 className={styles.cardTitle}>Contact</h2>
-        <img src='/icons/contact.svg' className={styles.pageIcon} />
-        <h3 className={styles.cardDesc}>{lang ? 'Get in touch with me' : 'Me contacter'}</h3>
+        <BsChatLeftText size={135} className={styles.pageIcon} />
+        <h3 className={styles.cardDesc}>{lang ? 'Me contacter' : 'Get in touch with me'}</h3>
       </a></Link>
     </div>
     

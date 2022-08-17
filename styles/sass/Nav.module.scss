@@ -65,14 +65,19 @@
     }
   }
 
-  .profile {
+  .nameBrand {
     display: flex;
     align-items: center;
     padding-left: 0.3rem;
-
     height: $mobile-nav-height;
     line-height: $mobile-nav-height;
     border-bottom: solid $white 2px;
+
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   
     @media screen and (min-width: $tablet-starts) {
       height: $tablet-nav-height;
@@ -92,6 +97,11 @@
     @media screen and (min-width: $tablet-starts) {
       padding-left: 0.25rem;
     }
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
 
     .name {
       font-weight: 450;
@@ -119,7 +129,6 @@
     a {
       width: 100%;
       display: inline-block;
-
       height: $mobile-nav-height;
       line-height: $mobile-nav-height;
       border-bottom: solid $white 2px;
