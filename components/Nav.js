@@ -6,26 +6,27 @@ import NavIcon from './NavIcon';
 const Nav = ({ lang }) => {
   const router = useRouter();
   const currentRoute = router.pathname;
+
   const navLinks = [
     {
       title: 'Home',
       fr: 'Accueil',
-      route: '/',
+      route: '',
     },
     {
       title: 'About',
       fr: 'À propos',
-      route: '/about',
+      route: 'about',
     },
     {
       title: 'Projects',
       fr: 'Projets',
-      route: '/projects',
+      route: 'projects',
     },
     {
       title: 'Contact',
       fr: 'Contact',
-      route: '/contact',
+      route: 'contact',
     },
   ];
   
@@ -33,15 +34,15 @@ const Nav = ({ lang }) => {
     <nav className={styles.topnav}>
       <div className={styles.profile}>
         <div className={styles.nameBrand}>
-          <Link href={lang ? '/fr/' : '/'}>
+          <Link href={lang ? '/fr' : '/'}>
             <a><img id={styles.profileIcon} src="/profile.png" alt="cw118" /></a>
           </Link>
-          <Link href={lang ? '/fr/' : '/'}>
+          <Link href={lang ? '/fr' : '/'}>
             <a className={styles.name}>Carolyn Wu</a>
           </Link>
         </div>
         <button id={styles.changeLang}>
-          <Link href={(lang ? '/' : '/fr') + currentRoute}>
+          <Link href={(lang ? currentRoute.replace('fr', '').replace('//', '/') : '/fr' + currentRoute)}>
             <a>
               <div id={styles.langWrapper}>
                 <span id={styles.mobileLang}>{lang ? 'EN' : 'FR'}</span><span id={styles.lang}>{lang ? 'English' : 'Français'}</span>
@@ -51,7 +52,7 @@ const Nav = ({ lang }) => {
         </button>
       </div>
       <div className={styles.navLinks}>
-        {navLinks.map((navLink) => <Link href={(lang ? '/fr/' : '') + navLink.route} key={lang ? navLink.fr : navLink.title}><a className={`${styles.navLink}` + ((currentRoute == navLink.route || currentRoute == '/fr' + navLink.route) ? ` ${styles.active}` : '')}><NavIcon link={navLink.title} /><span className={styles.linkPage}>{lang ? navLink.fr : navLink.title}</span></a></Link>)}
+        {navLinks.map((navLink) => <Link href={(lang ? '/fr' : '') + navLink.route} key={lang ? navLink.fr : navLink.title}><a className={`${styles.navLink}` + ((currentRoute == `/${navLink.route}` || currentRoute == `/fr${navLink.route}`) ? ` ${styles.active}` : '')}><NavIcon link={navLink.title} /><span className={styles.linkPage}>{lang ? navLink.fr : navLink.title}</span></a></Link>)}
       </div>
     </nav>
   );
