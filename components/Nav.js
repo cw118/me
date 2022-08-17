@@ -16,17 +16,17 @@ const Nav = ({ lang }) => {
     {
       title: 'About',
       fr: 'À propos',
-      route: 'about',
+      route: '/about',
     },
     {
       title: 'Projects',
       fr: 'Projets',
-      route: 'projects',
+      route: '/projects',
     },
     {
       title: 'Contact',
       fr: 'Contact',
-      route: 'contact',
+      route: '/contact',
     },
   ];
   
