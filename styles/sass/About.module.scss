@@ -66,3 +66,18 @@
     margin-top: 1.55rem;
   }
 }
+
+.codeCard {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.codeCardLabel {
+  font-size: $lg-font-size;
+}
+
+.codeCardLogo {
+  width: 90%;
+}
