@@ -32,7 +32,8 @@
 /* 54.93px */
 /* 22.50px */
 /* 16px */
-/* very light gray */ /* Styles/mixins for buttons */
+/* very light gray */
+/* Styles/mixins for buttons */
 .submitBtn {
   display: inline-block;
   border-radius: 10px;
@@ -168,39 +169,77 @@
   }
 }
 
-.codeStack {
+.skillstackTitle {
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.05rem;
+  margin-top: 2rem;
+  padding-bottom: 5px;
+  border-bottom: solid 2px #0077cc;
+}
+@media screen and (min-width: 590px) {
+  .skillstackTitle {
+    font-size: 2.3rem;
+  }
+}
+
+.techStack, .codeStack {
   display: flex;
   overflow-x: scroll;
   -ms-overflow-style: none;
-  padding: 0rem 0.7rem;
   scrollbar-width: none;
   user-select: none;
   cursor: grab !important;
+  transition: filter 0.3s;
 }
-.codeStack::-webkit-scrollbar {
+.techStack::-webkit-scrollbar, .codeStack::-webkit-scrollbar {
   display: none;
+}
+.techStack:hover, .codeStack:hover {
+  filter: brightness(0.95);
+}
+
+.techCard, .codeCard {
+  flex: none;
+  box-shadow: #000 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  transition: filter 0.2s;
+}
+.techCard:hover, .codeCard:hover {
+  filter: brightness(0.95);
+}
+.techCard:active, .codeCard:active {
+  filter: brightness(0.9);
+}
+
+.codeStack {
+  align-items: center;
+  padding: 0.3rem 0.7rem 1rem;
+  margin: 1.8rem 0rem;
+}
+@media screen and (min-width: 767px) {
+  .codeStack {
+    padding: 0.4rem 0.7rem 1.1rem;
+  }
 }
 
 .codeCard {
-  flex: none;
   padding: 1.2rem 0rem;
-  margin: 2.4rem 1.1rem;
-  width: 150px;
+  margin: 0rem 1.1rem;
+  width: 160px;
   height: 180px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   text-align: center;
   background-color: #1c7d7d;
   border-radius: 15px;
-  box-shadow: #000 0px 3px 8px;
-  cursor: grab !important;
   color: #fff;
 }
 @media screen and (min-width: 767px) {
   .codeCard {
-    margin: 2.5rem 1.3rem;
+    margin: 0rem 1.3rem;
     padding: 1.05rem 0rem;
   }
 }
@@ -209,12 +248,117 @@
   font-size: 1.953rem;
 }
 
-#htmlLogo {
-  fill: #e44f26;
+.techStack {
+  padding: 0.8rem 1.1rem 0.6rem;
+  margin: 0.9rem 0rem 2.5rem;
 }
 
-#cssLogo {
-  fill: #4db8ff;
+.techCard {
+  height: 75px;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  justify-content: space-evenly;
+  margin: 0rem 0.75rem;
+}
+
+.techCardLabel {
+  font-size: 1.563rem;
+  letter-spacing: 0.35px;
+  margin-left: 0.7rem;
+}
+
+.seeAlso {
+  width: 100vw;
+  display: grid;
+}
+@media screen and (min-width: 767px) {
+  .seeAlso {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.seeAlsoLink {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
+  background-color: #7da0bd;
+  color: #000;
+  border: solid 1px #151a1e;
+  transition: color, background-color 0.3s;
+}
+.seeAlsoLink:hover {
+  background-color: #495b69;
+  color: #fff;
+}
+@media screen and (min-width: 767px) {
+  .seeAlsoLink {
+    height: 95px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .seeAlsoLink {
+    font-size: 1.7rem;
+  }
+}
+
+#figmaCard {
+  background-color: #d4b3ff;
+}
+
+#githubCard {
+  background-color: #000;
+  color: #fff;
+}
+
+#gitCard {
+  background-color: #ffdd99;
+}
+
+#canvaCard {
+  background-color: #ff99e6;
+}
+
+#dokuwikiCard {
+  background-color: #99ceff;
+}
+
+#vscodeCard {
+  background-color: #adebeb;
+}
+
+#autocadCard {
+  background-color: #800000;
+  color: #fff;
+}
+
+#vexCard {
+  background-color: #bfbfbf;
+}
+
+#markdownCard {
+  background-color: #806000;
+  color: #fff;
+}
+
+#enCard {
+  background-color: #ffff99;
+}
+
+#frCard {
+  background-color: #9fdf9f;
+}
+
+#zhCard {
+  background-color: #800040;
+  color: #fff;
+}
+
+#ruCard {
+  background-color: #d6d6c2;
 }
 
 #jsLogo {
@@ -237,14 +381,6 @@
   fill: #00d8ff;
 }
 
-#cLogo {
-  fill: #a9b9cd;
-}
-
-#cppLogo {
-  fill: #1C4B7D;
-}
-
 #pythonLogo {
   user-select: none;
 }
@@ -253,12 +389,28 @@
   fill: #000;
 }
 
-#sqlLogo {
-  fill: #ffa142;
-}
-
 #nextLogo {
   fill: #000;
+}
+
+#githubLogo {
+  fill: #fff;
+}
+
+#gitLogo {
+  fill: #de4c36;
+}
+
+#canvaLogo {
+  fill: #26004d;
+}
+
+#autocadLogo {
+  fill: #fff;
+}
+
+#markdownLogo {
+  fill: #fff;
 }
 
 /*# sourceMappingURL=About.module.css.map */

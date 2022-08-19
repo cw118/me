@@ -67,11 +67,24 @@
   }
 }
 
-.codeStack {
+.skillstackTitle {
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.05rem;
+  margin-top: 2rem;
+  padding-bottom: 5px;
+  border-bottom: solid 2px $airblue-600;
+
+  @media screen and (min-width: $lg-mobile-starts) {
+    font-size: 2.3rem;
+  }
+}
+
+%stack {
   display: flex;
   overflow-x: scroll;
   -ms-overflow-style: none;
-  padding: 0rem 0.7rem;
   scrollbar-width: none;
   user-select: none;
 
@@ -80,27 +93,57 @@
   }
 
   cursor: grab !important;
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+%card {
+  flex: none;
+  box-shadow: $secondary-shadow;
+  display: flex;
+  align-items: center;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
+}
+
+.codeStack {
+  align-items: center;
+  padding: 0.3rem 0.7rem 1rem;
+  margin: 1.8rem 0rem;
+
+  @media screen and (min-width: $tablet-starts) {
+    padding: 0.4rem 0.7rem 1.1rem;
+  }
+
+  @extend %stack;
 }
 
 .codeCard {
-  flex: none;
   padding: 1.2rem 0rem;
-  margin: 2.4rem 1.1rem;
-  width: 150px;
+  margin: 0rem 1.1rem;
+  width: 160px;
   height: 180px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   text-align: center;
   background-color: $turquoise-700;
   border-radius: 15px;
-  box-shadow: $secondary-shadow;
-  cursor: grab !important;
   color: $white;
 
+  @extend %card;
+
   @media screen and (min-width: $tablet-starts) {
-    margin: 2.5rem 1.3rem;
+    margin: 0rem 1.3rem;
     padding: 1.05rem 0rem;
   }
 }
@@ -109,12 +152,118 @@
   font-size: $lg-font-size;
 }
 
-#htmlLogo {
-  fill: #e44f26;
+.techStack {
+  padding: 0.8rem 1.1rem 0.6rem;
+  margin: 0.9rem 0rem 2.5rem;
+  @extend %stack;
 }
 
-#cssLogo {
-  fill: #4db8ff;
+.techCard {
+  height: 75px;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  justify-content: space-evenly;
+  margin: 0rem 0.75rem;
+
+  @extend %card;
+}
+
+.techCardLabel {
+  font-size: $md-font-size;
+  letter-spacing: 0.35px;
+  margin-left: 0.7rem;
+}
+
+.seeAlso {
+  width: 100vw;
+  display: grid;
+
+  @media screen and (min-width: $tablet-starts) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.seeAlsoLink {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
+  background-color: $airblue-400;
+  color: $black;
+  border: solid 1px $navy-900;
+  transition: color, background-color 0.3s;
+
+  &:hover {
+    background-color: $slategray-650;
+    color: $white;
+  }
+
+  @media screen and (min-width: $tablet-starts) {
+    height: 95px; 
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    font-size: 1.7rem;
+  }
+}
+
+#figmaCard {
+  background-color: $violet-150;
+}
+
+#githubCard {
+  background-color: $black;
+  color: $white;
+}
+
+#gitCard {
+  background-color: $goldenrod-200;
+}
+
+#canvaCard {
+  background-color: $pastelpink-200;
+}
+
+#dokuwikiCard {
+  background-color: $blue-200;
+}
+
+#vscodeCard {
+  background-color: $airblue-200;
+}
+
+#autocadCard {
+  background-color: $red-750;
+  color: $white;
+}
+
+#vexCard {
+  background-color: #bfbfbf;
+}
+
+#markdownCard {
+  background-color: $goldenrod-750;
+  color: $white;
+}
+
+#enCard {
+  background-color: #ffff99;
+}
+
+#frCard {
+  background-color: #9fdf9f;
+}
+
+#zhCard {
+  background-color: #800040;
+  color: $white;
+}
+
+#ruCard {
+  background-color: #d6d6c2;
 }
 
 #jsLogo {
@@ -137,14 +286,6 @@
   fill: #00d8ff;
 }
 
-#cLogo {
-  fill: #a9b9cd;
-}
-
-#cppLogo {
-  fill: #1C4B7D;
-}
-
 #pythonLogo {
   user-select: none;
 }
@@ -153,10 +294,26 @@
   fill: $black;
 }
 
-#sqlLogo {
-  fill: #ffa142;
-}
-
 #nextLogo {
   fill: $black;
+}
+
+#githubLogo {
+  fill: $white;
+}
+
+#gitLogo {
+  fill: #de4c36;
+}
+
+#canvaLogo {
+  fill: #26004d;
+}
+
+#autocadLogo {
+  fill: $white;
+}
+
+#markdownLogo {
+  fill: $white;
 }
