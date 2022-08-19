@@ -5,7 +5,7 @@ import SeeAlso from '../../components/home/SeeAlso';
 export default function Accueil() {
   return (
     <>
-      <Nav lang='fr' />
+      <Nav />
       <main>
         <Hero lang='fr' />
         <SeeAlso lang='fr' />

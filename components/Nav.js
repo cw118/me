@@ -3,9 +3,11 @@ import styles from '../styles/Nav.module.css';
 import Link from 'next/link';
 import NavIcon from './NavIcon';
 
-const Nav = ({ lang }) => {
+const Nav = () => {
   const router = useRouter();
   const currentRoute = router.pathname;
+
+  const lang = currentRoute.includes('/fr') ? 'fr' : '';
 
   const navLinks = [
     {
