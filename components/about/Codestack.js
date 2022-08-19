@@ -1,37 +1,29 @@
-import { useState, useLayoutEffect } from 'react';
 import styles from '../../styles/About.module.css';
-import Slider from 'react-slick';
-import { HTMLCard } from './CodeCard';
+import { useRef } from 'react';
+import { useDraggable } from 'react-use-draggable-scroll';
+import { HTMLCard, CSSCard, JSCard, SassCard, TailwindCard, BootstrapCard, ReactCard, CCard, CppCard, PythonCard, FlaskCard, SQLCard, NextJSCard } from './CodeCard';
 
-const Codestack = () => {
+const CodeStack = () => {
+  const ref = useRef();
+  const { events } = useDraggable(ref);
   
-  const useWindowWidth = () => {
-    const [width, setWidth] = useState([0]);
-    
-    useLayoutEffect(() => {
-      const updateWidth = () => setWidth(window.innerWidth);
-      window.addEventListener('resize', updateWidth);
-      updateWidth();
-      return () => window.removeEventListener('resize', updateWidth);
-    }, []);
-    return width;
-  }
-  
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 400,
-    slidesToShow: useWindowWidth() / 150,
-    slidesToScroll: 1,
-  };
-
   return (
-    <div>
-      <Slider {...settings}>
-        <HTMLCard size='100' />
-      </Slider>
+    <div className={styles.codeStack} {...events} ref={ref}>
+      <HTMLCard />
+      <CSSCard />
+      <JSCard />
+      <SassCard />
+      <TailwindCard />
+      <BootstrapCard />
+      <ReactCard />
+      <CCard />
+      <CppCard />
+      <PythonCard />
+      <FlaskCard />
+      <SQLCard />
+      <NextJSCard />
     </div>
   );
 }
 
-export default Codestack;
+export default CodeStack;

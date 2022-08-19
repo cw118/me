@@ -1,6 +1,6 @@
 import Nav from '../components/Nav';
 import Hero from '../components/about/Hero';
-import Codestack from '../components/about/Codestack';
+import CodeStack from '../components/about/CodeStack';
 
 const about = () => {
   return (
@@ -8,7 +8,7 @@ const about = () => {
       <Nav />
       <main>
         <Hero />
-        <Codestack />
+        <CodeStack />
       </main>
     </>
   );

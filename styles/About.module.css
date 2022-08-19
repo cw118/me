@@ -32,7 +32,8 @@
 /* 54.93px */
 /* 22.50px */
 /* 16px */
-/* very light gray */ /* Styles/mixins for buttons */
+/* very light gray */
+/* Styles/mixins for buttons */
 .submitBtn {
   display: inline-block;
   border-radius: 10px;
@@ -168,19 +169,44 @@
   }
 }
 
+.codeStack {
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  padding: 0rem 0.7rem;
+  scrollbar-width: none;
+  user-select: none;
+  cursor: grab !important;
+}
+.codeStack::-webkit-scrollbar {
+  display: none;
+}
+
 .codeCard {
-  margin: 0 1rem;
+  flex: none;
+  padding: 1.2rem 0rem;
+  margin: 2.4rem 1.1rem;
+  width: 150px;
+  height: 180px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #1c7d7d;
+  border-radius: 15px;
+  box-shadow: #000 0px 3px 8px;
+  cursor: grab !important;
+}
+@media screen and (min-width: 767px) {
+  .codeCard {
+    margin: 2.5rem 1.3rem;
+    padding: 1.05rem 0rem;
+  }
 }
 
 .codeCardLabel {
   font-size: 1.953rem;
-}
-
-.codeCardLogo {
-  width: 90%;
 }
 
 /*# sourceMappingURL=About.module.css.map */

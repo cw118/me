@@ -132,7 +132,7 @@
 
 .line {
   background-color: #80bfff;
-  height: 0.05rem;
+  height: 1px;
   width: 50%;
   margin: auto;
 }
