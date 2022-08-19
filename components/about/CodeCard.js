@@ -1,5 +1,6 @@
 import styles from '../../styles/About.module.css';
-import { SiHtml5, SiCss3, SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiFlask, SiC, SiCplusplus, SiPython, SiSqlite, SiReact, SiNextdotjs } from 'react-icons/si';
+import Image from 'next/image';
+import { SiHtml5, SiCss3, SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiFlask, SiC, SiCplusplus, SiSqlite, SiReact, SiNextdotjs } from 'react-icons/si';
 
 export const HTMLCard = () => {
   return (
@@ -86,7 +87,7 @@ export const PythonCard = () => {
   return (
     <div className={styles.codeCard}>
       {/* export both vectors of python logo and edit the fill of each separately */}
-      <SiPython id={styles.pythonLogo} size={95} />
+      <Image src='/icons/pythonLogo.svg' id={styles.pythonLogo} width={100} height={100} alt='Python logo' />
       <h3 className={styles.codeCardLabel}>Python</h3>
     </div>
   );
