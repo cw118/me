@@ -85,6 +85,7 @@ export const CppCard = () => {
 export const PythonCard = () => {
   return (
     <div className={styles.codeCard}>
+      {/* export both vectors of python logo and edit the fill of each separately */}
       <SiPython id={styles.pythonLogo} size={95} />
       <h3 className={styles.codeCardLabel}>Python</h3>
     </div>
