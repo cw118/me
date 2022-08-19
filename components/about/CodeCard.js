@@ -87,7 +87,7 @@ export const PythonCard = () => {
   return (
     <div className={styles.codeCard}>
       {/* export both vectors of python logo and edit the fill of each separately */}
-      <Image src='/icons/pythonLogo.svg' id={styles.pythonLogo} width={100} height={100} alt='Python logo' />
+      <Image src='/icons/pythonLogo.svg' id={styles.pythonLogo} width={100} height={100} alt='Python logo' draggable='false' />
       <h3 className={styles.codeCardLabel}>Python</h3>
     </div>
   );

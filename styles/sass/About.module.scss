@@ -97,6 +97,7 @@
   border-radius: 15px;
   box-shadow: $secondary-shadow;
   cursor: grab !important;
+  color: $white;
 
   @media screen and (min-width: $tablet-starts) {
     margin: 2.5rem 1.3rem;
@@ -142,6 +143,10 @@
 
 #cppLogo {
   fill: #1C4B7D;
+}
+
+#pythonLogo {
+  user-select: none;
 }
 
 #flaskLogo {

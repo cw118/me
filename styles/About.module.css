@@ -196,6 +196,7 @@
   border-radius: 15px;
   box-shadow: #000 0px 3px 8px;
   cursor: grab !important;
+  color: #fff;
 }
 @media screen and (min-width: 767px) {
   .codeCard {
@@ -242,6 +243,10 @@
 
 #cppLogo {
   fill: #1C4B7D;
+}
+
+#pythonLogo {
+  user-select: none;
 }
 
 #flaskLogo {
