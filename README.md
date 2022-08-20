@@ -1,6 +1,6 @@
 # Welcome / Bienvenue :)
 
-***[Visit the site](https://carolynwu.me)***
+### **[Visit the site / Visiter le site  — <https://carolynwu.me>](https://carolynwu.me)**
 
 Hi there! This repository is where you'll find all code for my personal website, built with [`NextJS`](https://nextjs.org/) and [`Sass`](https://sass-lang.com/).
 

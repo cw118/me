@@ -1,0 +1,286 @@
+/* Gray */
+/* navlink active */
+/* navlink hover */
+/* navbar/footer bg */
+/* Blue */
+/* footer line break */
+/* Indigo */
+/* Orange */
+/* Turquoise */
+/* Violet */
+/* Goldenrod */
+/* Pink */
+/* Red */
+/* Other/special */
+/* site is mobile first
+ * mobile design/layout is coded first
+ */
+/* media queries */
+/* margin */
+/* main nav dimensions */
+/* footer height */
+/* z-index */
+/* font sizes and line heights */
+/* usually 16px */
+/* for tablet and desktop, 18px */
+/* mobile typescale based on major second scale (base of 100%)
+ * see/try it on type-scale.com
+ */
+/* 28.83px */
+/* 18.00px */
+/* tablet and desktop typescale based on perfect fourth */
+/* 54.93px */
+/* 22.50px */
+/* 16px */
+/* very light gray */
+/* Styles/mixins for buttons */
+.submitBtn {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.2s;
+  box-shadow: #dcd9d6 0px 8px 24px;
+  font-family: inherit;
+}
+.submitBtn:hover {
+  background-color: #d9d9d9;
+}
+
+.submitBtn {
+  /* customized from https://uiverse.io/detail/adamgiebl/smart-moth-68 */
+  background-color: #003c66;
+  color: #fff;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.266rem;
+}
+@media screen and (min-width: 767px) {
+  .submitBtn {
+    font-size: 1.25rem;
+  }
+}
+.submitBtn:hover {
+  background-color: #0077cc;
+}
+.submitBtn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+.submitBtn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+.submitBtn:hover span {
+  transform: translateX(5em);
+}
+.submitBtn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+.submitBtn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+.submitBtn:active {
+  transform: scale(0.95);
+}
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+#hero {
+  background-color: #212738;
+  color: #fff;
+}
+
+.gallery {
+  background-color: #212738;
+  padding: 0rem 2.1rem 2.9rem;
+  display: grid;
+  row-gap: 3rem;
+}
+@media screen and (min-width: 1023px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery {
+    row-gap: 3.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .gallery {
+    row-gap: 3.5rem;
+  }
+}
+
+.galleryItem {
+  background-color: #c7d1ce;
+  border-radius: 8px;
+  border: solid 2px #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 395px;
+  width: 90%;
+  margin: auto;
+}
+@media screen and (min-width: 590px) {
+  .galleryItem {
+    width: 80%;
+    height: 385px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .galleryItem {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .galleryItem {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .galleryItem {
+    width: 75%;
+  }
+}
+.galleryItem:hover .previewContainer {
+  opacity: 0;
+}
+.galleryItem:hover .viewOn, .galleryItem:hover .itemDescription {
+  z-index: 300;
+}
+
+.itemTitle {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #999999;
+  border-radius: 8px 8px 0px 0px;
+  border-bottom: solid 1px #000;
+}
+@media screen and (min-width: 590px) {
+  .itemTitle {
+    font-size: 1.45rem;
+  }
+}
+
+.itemDescription {
+  font-size: 1.05rem;
+  padding: 0.8rem 1.5rem;
+  line-height: 1.45;
+}
+@media screen and (min-width: 590px) {
+  .itemDescription {
+    font-size: 1.2rem;
+  }
+}
+.itemDescription p:nth-child(2), .itemDescription p:nth-child(3) {
+  margin-top: 0.4rem;
+}
+.itemDescription a {
+  text-decoration: underline;
+  color: #00698f;
+  transition: color 0.3s;
+}
+.itemDescription a:hover {
+  color: #00384d;
+}
+
+.viewOn {
+  width: 100%;
+  display: flex;
+  border-radius: 0px 0px 8px 8px;
+  border: solid 1px #000;
+  background-color: #ffb833;
+  height: 45px;
+}
+
+.leftLink {
+  border-right: solid 1px #000;
+  border-radius: 0px 0px 0px 8px;
+}
+
+.rightLink {
+  border-radius: 0px 0px 8px 0px;
+}
+
+.viewOnLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 50%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: background-color 0.25s;
+}
+.viewOnLink:hover {
+  background-color: #ff8c1a;
+}
+
+.previewContainer {
+  position: absolute;
+  top: 48px;
+  height: calc(100% - 48px);
+  width: 100%;
+  border-radius: 0px 0px 8px 8px;
+  transition: opacity 0.6s ease;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 590px) {
+  .previewContainer {
+    top: 53px;
+    height: calc(100% - 53px);
+  }
+}
+
+.seeAlsoLink {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #151a1e;
+}
+.seeAlsoLink:hover {
+  background-color: #f18e8e;
+}
+
+#mdn {
+  background-image: url("/preview/mdn.png");
+}
+
+#quetudesinfo {
+  background-image: url("/preview/quetudesinfo.png");
+}
+
+#wellfood {
+  background-image: url("/preview/wellfood.png");
+}
+
+#comedinewithus {
+  background-image: url("/preview/comedinewithus.png");
+}
+
+#ecotrack {
+  background-image: url("/preview/ecotrack.png");
+}
+
+#cs50 {
+  background-image: url("/preview/cs50.png");
+}
+
+/*# sourceMappingURL=Projects.module.css.map */

@@ -13,11 +13,11 @@ const Hero = ({ lang }) => {
   };
 
   return (
-    <div className={styles.hero}>
-      <h1 className={styles.title}>{lang ? 'À propos' : 'About'}</h1>
+    <div className='hero' id={styles.hero}>
+      <h1 className='title'>{lang ? 'À propos' : 'About'}</h1>
       <Underline color='turquoise' />
-      <p className={styles.summary}>{lang ? summaryOne.fr : summaryOne.en}</p>
-      <p className={styles.summary}>{lang ? summaryTwo.fr : summaryTwo.en}</p>
+      <p className='summary'>{lang ? summaryOne.fr : summaryOne.en}</p>
+      <p className='summary'>{lang ? summaryTwo.fr : summaryTwo.en}</p>
     </div>
   );
 }
