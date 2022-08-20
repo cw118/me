@@ -46,6 +46,10 @@
   background-color: #d9d9d9;
 }
 
+#hero {
+  background-color: #aabbb4;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -138,6 +142,10 @@
   .longInput {
     height: 170px;
   }
+}
+
+#honeypot {
+  display: none;
 }
 
 .submitBtn {

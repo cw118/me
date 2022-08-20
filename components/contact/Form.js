@@ -1,13 +1,8 @@
 import styles from '../../styles/Contact.module.css';
 
 const Form = ({ lang }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  }
-
   return (
-    <form className={styles.form} method='post' onSubmit={handleSubmit}>
-      <span id={styles.formMsg}></span>
+    <form className={styles.form} action='https://formsubmit.co/carolyn94118@gmail.com' method='POST' onSubmit={handleSubmit}>
       <div className={styles.inputGroup}>
         <label htmlFor='firstName' className={styles.label}>{lang ? 'Prénom (requis)\xa0:' : 'First name (required):'}</label>
         <input type='text' className={styles.shortInput} name='firstName' required />
@@ -24,6 +19,8 @@ const Form = ({ lang }) => {
         <label htmlFor='message' className={styles.label}>{lang ? 'Message (requis)\xa0:' : 'Message (required):'}</label>
         <textarea id={styles.message} className={styles.longInput} name='message' required></textarea>
       </div>
+      <input type='hidden' name='_next' value='/thanks' />
+      <input name='_honey' type='text' id={styles.honeypot} />
       <input className={styles.submitBtn} type='submit' value={lang ? 'Envoyer' : 'Send'} />
     </form>
   );

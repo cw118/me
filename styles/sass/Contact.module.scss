@@ -4,6 +4,10 @@
 @import './shadows';
 @import './buttons';
 
+#hero {
+  background-color: $ashgray-300;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -91,6 +95,10 @@
   @media screen and (min-width: $sm-desktop-starts) {
     height: 170px;
   }
+}
+
+#honeypot {
+  display: none;
 }
 
 .submitBtn {
