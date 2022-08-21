@@ -19,7 +19,7 @@ const Form = ({ lang }) => {
         <label htmlFor='message' className={styles.label}>{lang ? 'Message (requis)\xa0:' : 'Message (required):'}</label>
         <textarea id={styles.message} className={styles.longInput} name='message' required></textarea>
       </div>
-      <input type='hidden' name='_next' value='/thanks' />
+      <input type='hidden' name='_next' value='https://www.carolynwu.me/thanks' />
       <input name='_honey' type='text' id={styles.honeypot} />
       <input className={styles.submitBtn} type='submit' value={lang ? 'Envoyer' : 'Send'} />
     </form>
