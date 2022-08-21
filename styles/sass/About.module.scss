@@ -9,7 +9,7 @@
 }
 
 .skillstackTitle {
-  width: max-content;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   font-size: 2.05rem;
@@ -119,6 +119,8 @@
   background-color: $airblue-400;
   color: $black;
   border: solid 1px $navy-900;
+  padding: 1.5rem;
+  text-align: center;
 
   &:hover {
     background-color: $slategray-650;

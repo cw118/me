@@ -34,75 +34,12 @@
 /* 16px */
 /* very light gray */
 /* Styles/mixins for buttons */
-.submitBtn {
-  display: inline-block;
-  border-radius: 10px;
-  background-color: #fff;
-  transition: all 0.2s;
-  box-shadow: #dcd9d6 0px 8px 24px;
-  font-family: inherit;
-}
-.submitBtn:hover {
-  background-color: #d9d9d9;
-}
-
-.submitBtn {
-  /* customized from https://uiverse.io/detail/adamgiebl/smart-moth-68 */
-  background-color: #003c66;
-  color: #fff;
-  padding: 0.7em 1em;
-  padding-left: 0.9em;
-  display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  font-size: 1.266rem;
-}
-@media screen and (min-width: 767px) {
-  .submitBtn {
-    font-size: 1.25rem;
-  }
-}
-.submitBtn:hover {
-  background-color: #0077cc;
-}
-.submitBtn:hover .svg-wrapper {
-  animation: fly-1 0.6s ease-in-out infinite alternate;
-}
-.submitBtn:hover svg {
-  transform: translateX(1.2em) rotate(45deg) scale(1.1);
-}
-.submitBtn:hover span {
-  transform: translateX(5em);
-}
-.submitBtn span {
-  display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
-}
-.submitBtn svg {
-  display: block;
-  transform-origin: center center;
-  transition: transform 0.3s ease-in-out;
-}
-.submitBtn:active {
-  transform: scale(0.95);
-}
-@keyframes fly-1 {
-  from {
-    transform: translateY(0.1em);
-  }
-  to {
-    transform: translateY(-0.1em);
-  }
-}
-
 #hero {
   background-color: #ffcc99;
 }
 
 .skillstackTitle {
-  width: max-content;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   font-size: 2.05rem;
@@ -203,6 +140,8 @@
   background-color: #7da0bd;
   color: #000;
   border: solid 1px #151a1e;
+  padding: 1.5rem;
+  text-align: center;
 }
 .seeAlsoLink:hover {
   background-color: #495b69;
@@ -316,5 +255,3 @@
 #markdownLogo {
   fill: #fff;
 }
-
-/*# sourceMappingURL=About.module.css.map */

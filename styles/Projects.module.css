@@ -246,6 +246,8 @@
   background-color: #fff;
   color: #000;
   border: solid 1px #151a1e;
+  padding: 1.5rem;
+  text-align: center;
 }
 .seeAlsoLink:hover {
   background-color: #f18e8e;
@@ -274,5 +276,3 @@
 #cs50 {
   background-image: url("/preview/cs50.png");
 }
-
-/*# sourceMappingURL=Projects.module.css.map */
