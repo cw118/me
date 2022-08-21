@@ -32,8 +32,7 @@
 /* 54.93px */
 /* 22.50px */
 /* 16px */
-/* very light gray */
-/* Styles/mixins for buttons */
+/* very light gray */ /* Styles/mixins for buttons */
 .topnav {
   background-color: #333333;
   color: #fff;
@@ -136,7 +135,8 @@
 }
 @media screen and (max-width: 375px) {
   .profile .name {
-    font-size: 1.125rem;
+    font-size: 15px;
+    padding: 0 0.3rem;
   }
 }
 @media screen and (min-width: 767px) {
@@ -157,8 +157,7 @@
 }
 @media screen and (min-width: 767px) {
   .navLinks {
-    padding-right: 17px;
-    /* approximate avg/default width of scrollbar */
+    padding-right: 17px; /* approximate avg/default width of scrollbar */
   }
 }
 
@@ -245,6 +244,7 @@
 @media screen and (max-width: 375px) {
   #changeLang {
     font-size: 15.5px;
+    padding: 4px 7px;
   }
 }
 #changeLang::before {
@@ -267,3 +267,5 @@
 #changeLang:hover::before {
   width: 100%;
 }
+
+/*# sourceMappingURL=Nav.module.css.map */

@@ -4,7 +4,7 @@ import Underline from '../Underline';
 const Hero = ({ lang }) => {
   const summary = {
     en: 'I\'m a self-taught programmer, computer science enthusiast and open-source maintainer. I love problem-solving as well as all things science, math and tech.',
-    fr: 'Je suis autodidacte en programmation et une passionnée de l\'informatique. Je maintiens actuellement un projet open-source, et j\'adore tous les sujets impliquant la résolution de problèmes et le raisonnement logique.',
+    fr: 'Je suis autodidacte en programmation et une passionnée de l\'informatique. Je maintiens un projet open-source, et j\'adore tous les sujets impliquant la résolution de problèmes et le raisonnement logique.',
   }
 
   return (

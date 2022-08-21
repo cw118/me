@@ -33,8 +33,12 @@ a {
 
 main {
   padding-top: $mobile-nav-height;
-  padding-bottom: $footer-height;
+  padding-bottom: $sm-mobile-footer-height;
   overflow: hidden;
+
+  @media screen and (min-width: $md-mobile-starts) {
+    padding-bottom: $footer-height;
+  }
 
   @media screen and (min-width: $tablet-starts) {
     padding-top: $tablet-nav-height;

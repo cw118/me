@@ -20,10 +20,14 @@
   background-color: $gray-800;
   color: $white;
   width: 100vw;
-  height: $footer-height;
+  height: $sm-mobile-footer-height;
   padding: 1.2rem;
   font-size: $mobile-sm-font-size;
   text-align: center;
+
+  @media screen and (min-width: $md-mobile-starts) {
+    height: $footer-height;
+  }
 
   @media screen and (min-width: $tablet-starts) {
     font-size: $small-text;

@@ -14,8 +14,12 @@
   opacity: 30%;
   height: 300px;
 
-  @media screen and (max-width: 375px) {
-    height: 330px;
+  @media screen and (max-width: $md-mobile-starts) {
+    height: 450px;
+  }
+
+  @media screen and (min-width: $md-mobile-starts) and (max-width: 401px) {
+    height: 370px;
   }
 
   @media screen and (min-width: $tablet-starts) {
