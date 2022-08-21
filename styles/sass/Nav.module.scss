@@ -101,6 +101,10 @@
     padding: 0 0.4rem;
     margin-right: 0.25rem;
 
+    @media screen and (max-width: 375px) {
+      font-size: $mobile-sm-font-size;
+    }
+
     @media screen and (min-width: $tablet-starts) {
       padding: 0 0.4rem;
       letter-spacing: 0.5px;
@@ -117,7 +121,10 @@
   grid-template-columns: repeat(4, auto);
   height: 100%;
   text-align: center;
-  padding-right: 17px; /* approximate avg/default width of scrollbar */
+
+  @media screen and (min-width: $tablet-starts) {
+    padding-right: 17px; /* approximate avg/default width of scrollbar */
+  }
 }
 
 .navLink {
@@ -195,6 +202,10 @@
   transition: all 250ms;
   overflow: hidden;
   cursor: pointer;
+
+  @media screen and (max-width: 375px) {
+    font-size: 15.5px;
+  }
 
   &::before {
     content: "";

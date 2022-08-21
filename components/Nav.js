@@ -38,7 +38,7 @@ const Nav = () => {
       <div className={styles.profile}>
         <div className={styles.nameBrand}>
           <Link href={lang ? '/fr' : '/'}>
-            <a className={styles.profileContainer}><Image id={styles.profileIcon} width={43} height={43} src="/profile.png" alt="cw118" /></a>
+            <a className={styles.profileContainer}><Image id={styles.profileIcon} width={40} height={40} src="/profile.png" alt="cw118" /></a>
           </Link>
           <Link href={lang ? '/fr' : '/'}>
             <a className={styles.name}>Carolyn Wu</a>

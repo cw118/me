@@ -134,6 +134,11 @@
   padding: 0 0.4rem;
   margin-right: 0.25rem;
 }
+@media screen and (max-width: 375px) {
+  .profile .name {
+    font-size: 1.125rem;
+  }
+}
 @media screen and (min-width: 767px) {
   .profile .name {
     padding: 0 0.4rem;
@@ -149,8 +154,12 @@
   grid-template-columns: repeat(4, auto);
   height: 100%;
   text-align: center;
-  padding-right: 17px;
-  /* approximate avg/default width of scrollbar */
+}
+@media screen and (min-width: 767px) {
+  .navLinks {
+    padding-right: 17px;
+    /* approximate avg/default width of scrollbar */
+  }
 }
 
 .navLink {
@@ -233,6 +242,11 @@
   overflow: hidden;
   cursor: pointer;
 }
+@media screen and (max-width: 375px) {
+  #changeLang {
+    font-size: 15.5px;
+  }
+}
 #changeLang::before {
   content: "";
   position: absolute;
@@ -253,5 +267,3 @@
 #changeLang:hover::before {
   width: 100%;
 }
-
-/*# sourceMappingURL=Nav.module.css.map */
