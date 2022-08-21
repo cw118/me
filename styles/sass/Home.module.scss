@@ -14,6 +14,10 @@
   opacity: 30%;
   height: 300px;
 
+  @media screen and (max-width: 375px) {
+    height: 330px;
+  }
+
   @media screen and (min-width: $tablet-starts) {
     background-position: 10% center;
   }

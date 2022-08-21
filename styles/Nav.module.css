@@ -132,7 +132,7 @@
   font-weight: 450;
   font-size: 1.266rem;
   padding: 0 0.4rem;
-  margin-right: 0.25rem;
+  margin-right: 0.1rem;
 }
 @media screen and (max-width: 375px) {
   .profile .name {

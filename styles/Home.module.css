@@ -44,6 +44,11 @@
   opacity: 30%;
   height: 300px;
 }
+@media screen and (max-width: 375px) {
+  .heroImg {
+    height: 330px;
+  }
+}
 @media screen and (min-width: 767px) {
   .heroImg {
     background-position: 10% center;
