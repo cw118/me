@@ -78,20 +78,14 @@
   color: #000;
 }
 
+.profileContainer {
+  display: flex;
+  margin-bottom: 1.5px;
+}
+
 #profileIcon {
-  height: 2.4rem;
   border-radius: 50%;
-  border: solid #a09992 1px;
-}
-@media screen and (min-width: 767px) {
-  #profileIcon {
-    height: 2.15rem;
-  }
-}
-@media screen and (min-width: 1023px) {
-  #profileIcon {
-    height: 2.6rem;
-  }
+  border: solid #a09992 1px !important;
 }
 
 .nameBrand {
@@ -259,3 +253,5 @@
 #changeLang:hover::before {
   width: 100%;
 }
+
+/*# sourceMappingURL=Nav.module.css.map */

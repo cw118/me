@@ -47,18 +47,14 @@
   color: $black;
 }
 
+.profileContainer {
+  display: flex;
+  margin-bottom: 1.5px;
+}
+
 #profileIcon {
-  height: 2.4rem;
   border-radius: 50%;
-  border: solid $gray-400 1px;
-
-  @media screen and (min-width: $tablet-starts) {
-    height: 2.15rem;
-  }
-
-  @media screen and (min-width: $sm-desktop-starts) {
-    height: 2.6rem;
-  }
+  border: solid $gray-400 1px !important;
 }
 
 .nameBrand {

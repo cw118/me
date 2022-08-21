@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import styles from '../styles/Nav.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 import NavIcon from './NavIcon';
 
 const Nav = () => {
@@ -37,7 +38,7 @@ const Nav = () => {
       <div className={styles.profile}>
         <div className={styles.nameBrand}>
           <Link href={lang ? '/fr' : '/'}>
-            <a><img id={styles.profileIcon} src="/profile.png" alt="cw118" /></a>
+            <a className={styles.profileContainer}><Image id={styles.profileIcon} width={43} height={43} src="/profile.png" alt="cw118" /></a>
           </Link>
           <Link href={lang ? '/fr' : '/'}>
             <a className={styles.name}>Carolyn Wu</a>
