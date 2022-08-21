@@ -1,0 +1,132 @@
+@import './colors';
+@import './layout';
+@import './typography';
+@import './shadows';
+@import './buttons';
+
+#hero {
+  background-color: $ashgray-300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  padding: 0rem 2rem 1.7rem;
+  background-color: $ashgray-300;
+
+  @media screen and (min-width: $tablet-starts) {
+    padding: 0rem 2.5rem 1.7rem;
+  }
+   
+  @media screen and (min-width: $sm-desktop-starts) {
+    padding: 0rem 2.7rem 1.7rem;
+  }
+   
+  @media screen and (min-width: $tablet-starts) {
+    padding: 0rem 2.5rem 1.7rem;
+  }
+   
+}
+
+.form > div, .form > input {
+  margin-bottom: 1rem;
+}
+
+%input {
+  border: solid 2px $oxfordblue-800;
+  border-radius: 13px;
+  background-color: $white;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: inherit;
+  padding: 8px 7px;
+  margin: 0.5rem 0rem 0.25rem;
+  place-self: center;
+  
+  &:focus {
+    outline: none;
+    border-color: $airblue-600;
+  }
+}
+
+.label {
+  font-size: 1.35rem;
+  cursor: text;
+}
+
+.inputGroup {
+  width: 100%;
+  display: grid;
+
+  @media screen and (min-width: $lg-tablet-starts) {
+    width: 90%;
+  }
+  
+  @media screen and (min-width: $sm-desktop-starts) {
+    width: 80%;
+  }
+  
+  @media screen and (min-width: $lg-desktop-starts) {
+    width: 70%;
+  }
+  
+  @media screen and (min-width: $xl-desktop-starts) {
+    width: 60%;
+  }
+}
+
+.shortInput {
+  @extend %input;
+  height: 40px;
+}
+
+.longInput {
+  @extend %input;
+  height: 200px;
+  resize: none;
+
+  @media screen and (min-width: $tablet-starts) {
+    height: 180px;
+  }
+  
+  @media screen and (min-width: $sm-desktop-starts) {
+    height: 170px;
+  }
+}
+
+#honeypot {
+  display: none;
+}
+
+.submitBtn {
+  /* customized from https://uiverse.io/detail/cssbuttons-io/stale-rattlesnake-87 */
+  @extend %btn;
+  margin-top: 10px;
+  padding: 0.45em 1.2em;
+  letter-spacing: 0.2px;
+  color: $black;
+  background-color: $white;
+  border: solid 2px $oxfordblue-800;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  font-size: 1.45rem;
+
+  &:hover {
+    box-shadow: 0px 15px 20px $airblue-400;
+    background-color: $oxfordblue-800;
+    color: $white;
+    transform: translateY(-7px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    background-color: lighten($oxfordblue-800, 10);
+  }
+}

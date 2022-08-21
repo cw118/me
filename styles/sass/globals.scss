@@ -1,0 +1,184 @@
+@import './colors';
+@import './layout';
+@import './typography';
+@import './shadows';
+@import './buttons';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Ubuntu&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed', 'Trebuchet MS', 'Segoe UI', Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: $black;
+  font-size: $mobile-base-font-size;
+  font-weight: 400;
+  height: 100%;
+  
+  @media screen and (min-width: $tablet-starts) {
+    font-size: $base-font-size;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  padding-top: $mobile-nav-height;
+  padding-bottom: $footer-height;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-starts) {
+    padding-top: $tablet-nav-height;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    padding-top: $sm-desktop-nav-height;
+  }
+
+  @media screen and (min-width: $lg-desktop-starts) {
+    padding-top: $lg-desktop-nav-height;
+  }
+}
+
+.hero {
+  height: auto;
+  padding: 1.3rem 2.2rem 2.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.5;
+
+  @media screen and (min-width: $tablet-starts) {
+    padding: 1.6rem 2.6rem 2.5rem;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    padding: 1.4rem 3rem 2.6rem;
+  }
+
+  @media screen and (min-width: $lg-desktop-starts) {
+    padding: 1.4rem 3.3rem 3.2rem;
+  }
+}
+
+.title {
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.4rem;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: 58px;
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    font-size: 62px;
+  }
+
+  @media screen and (min-width: $lg-desktop-starts) {
+    font-size: 68px;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.summary {
+  font-size: 1.3rem;
+  margin-top: 1.1rem;
+
+  @media screen and (min-width: $tablet-starts) {
+    font-size: 1.35rem;
+    margin-top: 1.3rem;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    font-size: 1.4rem;
+    margin-top: 1.38rem;
+  }
+
+  @media screen and (min-width: $lg-desktop-starts) {
+    font-size: 1.5rem;
+    margin-top: 1.55rem;
+  }
+}
+
+.seeAlso {
+  width: 100vw;
+  display: grid;
+
+  @media screen and (min-width: $tablet-starts) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.seeAlsoLink {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
+  transition: color, background-color 0.3s;
+
+  @media screen and (min-width: $tablet-starts) {
+    height: 95px;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    font-size: 1.7rem;
+  }
+}
+
+.underlineDeco {
+  height: 7px;
+  width: 180px;
+  margin: auto;
+
+  @media screen and (min-width: $tablet-starts) {
+    width: 220px;
+    height: 7.5px;
+  }
+
+  @media screen and (min-width: $sm-desktop-starts) {
+    width: 300px;
+    height: 8px
+  }
+}
+
+.white {
+  background-color: $white;
+}
+
+.turquoise {
+  background-color: $turquoise-750;
+}
+
+.pink {
+  background-color: $pastelpink-250;
+}
+
+.eggplant {
+  background-color: $eggplant-600;
+}
+
+.navy {
+  background-color: $blue-800;
+}
+
+.mint {
+  background-color: $mint-100;
+}
+
+.metalPink {
+  background-color: $metallicpink-200;
+}

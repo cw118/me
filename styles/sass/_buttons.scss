@@ -1,0 +1,14 @@
+/* Styles/mixins for buttons */
+
+%btn {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: $white;
+  transition: all 0.2s;
+  box-shadow: $primary-shadow;
+  font-family: inherit;
+
+  &:hover {
+    background-color: darken($white, 15%);
+  }
+}
