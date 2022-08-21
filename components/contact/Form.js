@@ -2,7 +2,7 @@ import styles from '../../styles/Contact.module.css';
 
 const Form = ({ lang }) => {
   return (
-    <form className={styles.form} method='POST'>
+    <form className={styles.form} method='POST' action='https://formsubmit.co/098e738602031196f8cce267164e6cde'>
       <div className={styles.inputGroup}>
         <label htmlFor='firstName' className={styles.label}>{lang ? 'Prénom (requis)\xa0:' : 'First name (required):'}</label>
         <input type='text' className={styles.shortInput} name='firstName' required />
