@@ -9,7 +9,7 @@ import { TbMessageLanguage } from 'react-icons/tb';
 export const FigmaCard = () => {
   return (
     <div className={styles.techCard} tabIndex='1' id={styles.figmaCard}>
-      <Image src='/icons/figmaLogo.svg' alt='Figma logo' width={33} height={50} />
+      <Image src='/icons/figmaLogo.svg' alt='Figma logo' width={33} height={50} draggable='false' />
       <h3 className={styles.techCardLabel}>Figma</h3>
     </div>
   );
@@ -45,7 +45,7 @@ export const CanvaCard = () => {
 export const DokuwikiCard = () => {
   return (
     <div className={styles.techCard} tabIndex='1' id={styles.dokuwikiCard}>
-      <Image src='/icons/dokuwikiLogo.svg' alt='DokuWiki logo' width={50} height={50} />
+      <Image src='/icons/dokuwikiLogo.svg' alt='DokuWiki logo' width={50} height={50} draggable='false' />
       <h3 className={styles.techCardLabel}>DokuWiki</h3>
     </div>
   );
@@ -54,7 +54,7 @@ export const DokuwikiCard = () => {
 export const VscodeCard = () => {
   return (
     <div className={styles.techCard} tabIndex='1' id={styles.vscodeCard}>
-      <Image src='/icons/vscodeLogo.svg' alt='VS Code logo' width={50} height={50} />
+      <Image src='/icons/vscodeLogo.svg' alt='VS Code logo' width={50} height={50} draggable='false' />
       <h3 className={styles.techCardLabel}>VS Code</h3>
     </div>
   );
@@ -72,7 +72,7 @@ export const AutocadCard = () => {
 export const VexCard = () => {
   return (
     <div className={styles.techCard} tabIndex='1' id={styles.vexCard}>
-      <Image src='/icons/vexLogo.svg' alt='VEX Robotics' width={50} height={50} />
+      <Image src='/icons/vexLogo.svg' alt='VEX Robotics' width={50} height={50} draggable='false' />
       <h3 className={styles.techCardLabel}>VEX</h3>
     </div>
   );
