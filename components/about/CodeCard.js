@@ -5,7 +5,7 @@ import { SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiFlask, SiReact, SiN
 export const HTMLCard = () => {
   return (
     <div className={styles.codeCard} tabIndex='1'>
-      <Image src='/icons/htmlLogo.svg' alt='HTML logo' width={100} height={100} />
+      <Image src='/icons/htmlLogo.svg' alt='HTML logo' width={100} height={100} draggable='false' />
       <h3 className={styles.codeCardLabel}>HTML</h3>
     </div>
   );
@@ -14,7 +14,7 @@ export const HTMLCard = () => {
 export const CSSCard = () => {
   return (
     <div className={styles.codeCard} tabIndex='1'>
-      <Image src='/icons/cssLogo.svg' alt='CSS logo' width={100} height={100} />
+      <Image src='/icons/cssLogo.svg' alt='CSS logo' width={100} height={100} draggable='false' />
       <h3 className={styles.codeCardLabel}>CSS</h3>
     </div>
   );
@@ -68,7 +68,7 @@ export const ReactCard = () => {
 export const CCard = () => {
   return (
     <div className={styles.codeCard} tabIndex='1'>
-      <Image src='/icons/cLogo.svg' alt='C logo' width={100} height={100} />
+      <Image src='/icons/cLogo.svg' alt='C logo' width={100} height={100} draggable='false' />
       <h3 className={styles.codeCardLabel}>C</h3>
     </div>
   );
@@ -77,7 +77,7 @@ export const CCard = () => {
 export const CppCard = () => {
   return (
     <div className={styles.codeCard} tabIndex='1'>
-      <Image src='/icons/cppLogo.svg' alt='C plus plus logo' width={100} height={100} />
+      <Image src='/icons/cppLogo.svg' alt='C plus plus logo' width={100} height={100} draggable='false' />
       <h3 className={styles.codeCardLabel}>C++</h3>
     </div>
   );
@@ -104,7 +104,7 @@ export const FlaskCard = () => {
 export const SQLCard = () => {
   return (
     <div className={styles.codeCard} tabIndex='1'>
-      <Image src='/icons/sqlLogo.svg' alt='SQL logo' width={100} height={100} />
+      <Image src='/icons/sqlLogo.svg' alt='SQL logo' width={100} height={100} draggable='false' />
       <h3 className={styles.codeCardLabel}>SQL</h3>
     </div>
   );
