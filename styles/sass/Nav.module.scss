@@ -16,7 +16,7 @@
   z-index: 999;
 
   display: grid;
-  grid-template-columns: 2.1fr 1.9fr;
+  grid-template-columns: 2.2fr 1.72fr;
   align-items: center;
 
   /* mobile height */
@@ -27,7 +27,7 @@
     height: $tablet-nav-height;
     font-size: $sm-font-size;
     letter-spacing: 0.75px;
-    grid-template-columns: 1.7fr 2.3fr;
+    grid-template-columns: 1.4fr 2.6fr;
   }
 
   /* small desktop (laptop) dimensions */
@@ -124,7 +124,7 @@
   text-align: center;
 
   @media screen and (min-width: $tablet-starts) {
-    padding-right: 17px; /* approximate avg/default width of scrollbar */
+    padding-right: 14px; /* account for (partial) width of scrollbar */
   }
 }
 
@@ -141,6 +141,7 @@
   @media screen and (min-width: $tablet-starts) {
     height: $tablet-nav-height;
     line-height: $tablet-nav-height;
+    padding: 0.5rem;
   }
 
   @media screen and (min-width: $sm-desktop-starts) {

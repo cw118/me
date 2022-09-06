@@ -32,7 +32,8 @@
 /* 54.93px */
 /* 22.50px */
 /* 16px */
-/* very light gray */ /* Styles/mixins for buttons */
+/* very light gray */
+/* Styles/mixins for buttons */
 .topnav {
   background-color: #333333;
   color: #fff;
@@ -44,7 +45,7 @@
   font-weight: bold;
   z-index: 999;
   display: grid;
-  grid-template-columns: 2.1fr 1.9fr;
+  grid-template-columns: 2.2fr 1.72fr;
   align-items: center;
   /* mobile height */
   height: 3.5rem;
@@ -57,7 +58,7 @@
     height: 3.55rem;
     font-size: 1.25rem;
     letter-spacing: 0.75px;
-    grid-template-columns: 1.7fr 2.3fr;
+    grid-template-columns: 1.4fr 2.6fr;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -157,7 +158,8 @@
 }
 @media screen and (min-width: 767px) {
   .navLinks {
-    padding-right: 17px; /* approximate avg/default width of scrollbar */
+    padding-right: 14px;
+    /* account for (partial) width of scrollbar */
   }
 }
 
@@ -175,6 +177,7 @@
   .navLink {
     height: 3.55rem;
     line-height: 3.55rem;
+    padding: 0.5rem;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -267,5 +270,3 @@
 #changeLang:hover::before {
   width: 100%;
 }
-
-/*# sourceMappingURL=Nav.module.css.map */
