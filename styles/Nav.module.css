@@ -156,7 +156,7 @@
   height: 100%;
   text-align: center;
 }
-@media screen and (min-width: 767px) {
+@media screen and (pointer: fine) {
   .navLinks {
     padding-right: 14px;
     /* account for (partial) width of scrollbar */
