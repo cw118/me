@@ -11,7 +11,7 @@ const CodeStack = ({ lang }) => {
   
   return (
     <>
-      <h2 className={styles.skillstackTitle}>{lang ? 'Mes compétences et connaissances' : 'My knowledge and skills'}</h2>
+      <h2 className={styles.skillstackTitle}>{lang ? 'Mes compétences' : 'My skills'}</h2>
       <div className={styles.codeStack} {...events} ref={ref}>
         <HTMLCard />
         <CSSCard />
