@@ -12,6 +12,7 @@ const GalleryFr = () => {
           <Tag>Markdown</Tag>
           <Tag>Git</Tag>
           <Tag>GitHub</Tag>
+          <Tag>YAML</Tag>
           <Tag>API</Tag>
           <Tag>CSS</Tag>
           <Tag>HTML</Tag>
@@ -105,6 +106,7 @@ const GalleryFr = () => {
           <Tag>Python</Tag>
           <Tag>SQL</Tag>
           <Tag>Flask</Tag>
+          <Tag>Bootstrap</Tag>
           <Tag>HTML</Tag>
           <Tag>CSS</Tag>
           <Tag>JavaScript</Tag>

@@ -12,11 +12,11 @@ const Gallery = () => {
           <Tag>Markdown</Tag>
           <Tag>Git</Tag>
           <Tag>GitHub</Tag>
+          <Tag>YAML</Tag>
           <Tag>API</Tag>
           <Tag>CSS</Tag>
           <Tag>HTML</Tag>
           <Tag>JS</Tag>
-          <Tag>YAML</Tag>
         </ItemHeader>
         <div className={styles.itemDescription}>
           <p>As a member of the French review team, my main role is to triage and fix bugs, as well as to suggest and <Link href='https://github.com/mdn/translated-content/pulls?q=reviewed-by%3Acw118+'>review translations</Link>; I also contribute to <Link href='https://github.com/mdn/content/issues?q=author%3Acw118'>English content</Link> and to the source code.</p>
