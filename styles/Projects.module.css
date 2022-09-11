@@ -32,8 +32,7 @@
 /* 54.93px */
 /* 22.50px */
 /* 16px */
-/* very light gray */
-/* Styles/mixins for buttons */
+/* very light gray */ /* Styles/mixins for buttons */
 #hero {
   background-color: #212738;
   color: #fff;
@@ -145,7 +144,7 @@
 }
 .itemDescription a {
   text-decoration: underline;
-  color: #00698f;
+  color: #005c7d;
   transition: color 0.3s;
 }
 .itemDescription a:hover {

@@ -107,7 +107,7 @@
 
   a {
     text-decoration: underline;
-    color: lighten($primary-color, 8);
+    color: lighten($primary-color, 4.5);
     transition: color 0.3s;
 
     &:hover {
