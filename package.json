@@ -18,8 +18,10 @@
     "react-use-draggable-scroll": "^0.4.7"
   },
   "devDependencies": {
-    "eslint": "8.29.0",
+    "eslint": "8.30.0",
     "eslint-config-next": "13.1.0",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.0.6",
     "sass": "^1.57.0"
   }
 }
