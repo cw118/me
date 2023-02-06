@@ -4,14 +4,14 @@ import Link from 'next/link';
 const Checkerboard = () => {
   return (
     <div className={styles.checkerboard}>
-      <Link href='/'><a className={styles.checkerSquare}>Home page</a></Link>
-      <Link href='/about'><a className={styles.checkerSquare}>About me</a></Link>
-      <Link href='/projects'><a className={styles.checkerSquare}>See my projects</a></Link>
-      <Link href='/contact'><a className={styles.checkerSquare}>Contact me</a></Link>
-      <Link href='/fr'><a className={styles.checkerSquare}>Page d'accueil</a></Link>
-      <Link href='/fr/about'><a className={styles.checkerSquare}>À propos de moi</a></Link>
-      <Link href='/fr/projects'><a className={styles.checkerSquare}>Voir mes projets</a></Link>
-      <Link href='/fr/contact'><a className={styles.checkerSquare}>Me contacter</a></Link>
+      <Link className={styles.checkerSquare} href='/'>Home page</Link>
+      <Link className={styles.checkerSquare} href='/about'>About me</Link>
+      <Link className={styles.checkerSquare} href='/projects'>See my projects</Link>
+      <Link className={styles.checkerSquare} href='/contact'>Contact me</Link>
+      <Link className={styles.checkerSquare} href='/fr'>Page d'accueil</Link>
+      <Link className={styles.checkerSquare} href='/fr/about'>À propos de moi</Link>
+      <Link className={styles.checkerSquare} href='/fr/projects'>Voir mes projets</Link>
+      <Link className={styles.checkerSquare} href='/fr/contact'>Me contacter</Link>
     </div>
   );
 }

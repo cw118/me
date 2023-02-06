@@ -23,8 +23,8 @@ const GalleryFr = () => {
           <p><Link href='https://github.com/mdn'>MDN Web Docs</Link>, un projet open-source lancé par Mozilla en 2005, documente les technologies web (HTML, CSS, etc.).</p>
         </div>
         <div className={styles.viewOn}>
-          <Link href='https://developer.mozilla.org/'><a className={`${styles.viewOnLink} ${styles.leftLink}`}>MDN Web Docs</a></Link>
-          <Link href='https://github.com/mdn/translated-content/issues?q=author%3Acw118'><a className={`${styles.viewOnLink} ${styles.rightLink}`}>GitHub</a></Link>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://developer.mozilla.org/'>MDN Web Docs</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/mdn/translated-content/issues?q=author%3Acw118'>GitHub</Link>
         </div>
         <div className={styles.previewContainer} id={styles.mdn}></div>
       </div>
@@ -41,8 +41,8 @@ const GalleryFr = () => {
           <p><i>Vous pouvez <Link href='https://github.com/cw118/quetudesinfo/compare'>apporter une contribution</Link> sur le dépôt GitHub <Link href='https://github.com/cw118/quetudesinfo'>cw118/quetudesinfo</Link>&nbsp;!</i></p>
         </div>
         <div className={styles.viewOn}>
-          <Link href='https://cw118.github.io/quetudesinfo'><a className={`${styles.viewOnLink} ${styles.leftLink}`}>QUÉtudes-info</a></Link>
-          <Link href='https://github.com/cw118/quetudesinfo'><a className={`${styles.viewOnLink} ${styles.rightLink}`}>GitHub</a></Link>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://cw118.github.io/quetudesinfo'>QUÉtudes-info</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/cw118/quetudesinfo'>GitHub</Link>
         </div>
         <div className={styles.previewContainer} id={styles.quetudesinfo}></div>
       </div>
@@ -59,8 +59,8 @@ const GalleryFr = () => {
           <p>WellFood&nbsp;: lutter contre l'insécurité alimentaire et la faim en mettant à disposition aux personnes dans le besoin des denrées excédentaires.</p>
         </div>
         <div className={styles.viewOn}>
-          <Link href='https://devpost.com/software/wellfood'><a className={`${styles.viewOnLink} ${styles.leftLink}`}>Devpost</a></Link>
-          <Link href='https://www.figma.com/proto/k7awhli2KOVWhQHEh8PDLZ/Ellehacks-2022%3A-Fully-Developed---WellFood'><a className={`${styles.viewOnLink} ${styles.rightLink}`}>Figma</a></Link>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://devpost.com/software/wellfood'>Devpost</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://www.figma.com/proto/k7awhli2KOVWhQHEh8PDLZ/Ellehacks-2022%3A-Fully-Developed---WellFood'>Figma</Link>
         </div>
         <div className={styles.previewContainer} id={styles.wellfood}></div>
       </div>
@@ -78,8 +78,8 @@ const GalleryFr = () => {
           <p>Vous avez préparé trop de nourriture et ne savez pas quoi en faire&nbsp;? Dînez avec nous&nbsp;!</p>
         </div>
         <div className={styles.viewOn}>
-          <Link href='https://devpost.com/software/come-dine-with-us'><a className={`${styles.viewOnLink} ${styles.leftLink}`}>Devpost</a></Link>
-          <Link href='https://github.com/piaoruilin/come-dine-with.us'><a className={`${styles.viewOnLink} ${styles.rightLink}`}>GitHub</a></Link>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://devpost.com/software/come-dine-with-us'>Devpost</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/piaoruilin/come-dine-with.us'>GitHub</Link>
         </div>
         <div className={styles.previewContainer} id={styles.comedinewithus}></div>
       </div>
@@ -95,8 +95,8 @@ const GalleryFr = () => {
           <p>Le réchauffement planétaire risque de devenir catastrophique — on ne peut pas rester les bras croisés&nbsp;!</p>
         </div>
         <div className={styles.viewOn}>
-          <Link href='https://devpost.com/software/ecotrack-6l8v34'><a className={`${styles.viewOnLink} ${styles.leftLink}`}>Devpost</a></Link>
-          <Link href='https://www.figma.com/proto/MfnXtXnFMUg5SANQFohYjj/EcoTrack'><a className={`${styles.viewOnLink} ${styles.rightLink}`}>Figma</a></Link>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://devpost.com/software/ecotrack-6l8v34'>Devpost</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://www.figma.com/proto/MfnXtXnFMUg5SANQFohYjj/EcoTrack'>Figma</Link>
         </div>
         <div className={styles.previewContainer} id={styles.ecotrack}></div>
       </div>
@@ -116,7 +116,7 @@ const GalleryFr = () => {
           <p><i>*MOOC = Massive Open Online Course</i></p>
         </div>
         <div className={styles.viewOn}>
-          <Link href='https://cs50.harvard.edu/x/'><a className={styles.viewOnLink}>CS50x</a></Link>
+          <Link className={styles.viewOnLink} href='https://cs50.harvard.edu/x/'>CS50x</Link>
         </div>
         <div className={styles.previewContainer} id={styles.cs50}></div>
       </div>
