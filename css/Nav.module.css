@@ -1,0 +1,268 @@
+/* Gray */
+/* navlink active */
+/* navlink hover */
+/* navbar/footer bg */
+/* Blue */
+/* footer line break */
+/* Indigo */
+/* Orange */
+/* Turquoise */
+/* Violet */
+/* Goldenrod */
+/* Pink */
+/* Red */
+/* Other/special */
+/* site is mobile first
+ * mobile design/layout is coded first
+ */
+/* media queries */
+/* margin */
+/* main nav dimensions */
+/* footer height */
+/* z-index */
+/* font sizes and line heights */
+/* usually 16px */
+/* for tablet and desktop, 18px */
+/* mobile typescale based on major second scale (base of 100%)
+ * see/try it on type-scale.com
+ */
+/* 28.83px */
+/* 18.00px */
+/* tablet and desktop typescale based on perfect fourth */
+/* 54.93px */
+/* 22.50px */
+/* 16px */
+/* very light gray */ /* Styles/mixins for buttons */
+.topnav {
+  background-color: #333333;
+  color: #fff;
+  border-bottom: solid #fff 2px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  font-size: 1.125rem;
+  font-weight: bold;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 2.2fr 1.72fr;
+  align-items: center;
+  /* mobile height */
+  height: 3.5rem;
+  /* tablet dimensions */
+  /* small desktop (laptop) dimensions */
+  /* large desktop dimensions */
+}
+@media screen and (min-width: 767px) {
+  .topnav {
+    height: 3.55rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    grid-template-columns: 1.4fr 2.6fr;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .topnav {
+    height: 3.65rem;
+    font-size: 1.45rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .topnav {
+    height: 3.75rem;
+  }
+}
+
+.active {
+  background-color: #a09992;
+  color: #000;
+}
+
+.profileContainer {
+  display: flex;
+  margin-bottom: 1.5px;
+}
+
+#profileIcon {
+  border-radius: 50%;
+  border: solid #a09992 1px !important;
+}
+
+.nameBrand {
+  display: flex;
+  align-items: center;
+  padding-left: 0.3rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-bottom: solid #fff 2px;
+  transition: filter 0.3s;
+}
+.nameBrand:hover {
+  filter: brightness(0.8);
+}
+@media screen and (min-width: 767px) {
+  .nameBrand {
+    height: 3.55rem;
+    line-height: 3.55rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .nameBrand {
+    height: 3.65rem;
+    line-height: 3.65rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nameBrand {
+    height: 3.75rem;
+    line-height: 3.75rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .nameBrand {
+    padding-left: 0.25rem;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile .name {
+  font-weight: 450;
+  font-size: 1.266rem;
+  padding: 0 0.4rem;
+  margin-right: 0.1rem;
+}
+@media screen and (max-width: 375px) {
+  .profile .name {
+    font-size: 15px;
+    padding: 0 0.3rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .profile .name {
+    padding: 0 0.4rem;
+    letter-spacing: 0.5px;
+  }
+}
+.profile a img {
+  display: block;
+}
+
+.navLinks {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  height: 100%;
+  text-align: center;
+}
+@media screen and (pointer: fine) {
+  .navLinks {
+    padding-right: 14px; /* account for (partial) width of scrollbar */
+  }
+}
+
+.navLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-bottom: solid #fff 2px;
+  transition: color, background-color 0.25s;
+}
+@media screen and (min-width: 767px) {
+  .navLink {
+    height: 3.55rem;
+    line-height: 3.55rem;
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .navLink {
+    height: 3.65rem;
+    line-height: 3.65rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navLink {
+    height: 3.75rem;
+    line-height: 3.75rem;
+  }
+}
+.navLink:hover {
+  background-color: #524d47;
+  color: #fff;
+}
+
+.linkPage {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  .linkPage {
+    display: inline;
+    margin-left: 0.35em;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #mobileLang {
+    display: none;
+  }
+}
+
+#lang {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  #lang {
+    display: inline-block;
+  }
+}
+
+#changeLangLink {
+  display: flex;
+  /* helps center the button vertically */
+}
+
+#changeLang {
+  /* customized from https://uiverse.io/detail/alexroumi/shy-sloth-91 */
+  padding: 5px 10px;
+  border: unset;
+  border-radius: 8px;
+  color: #212121;
+  z-index: 1;
+  background: #dcd9d6;
+  position: relative;
+  font-family: inherit;
+  font-size: 17px;
+  box-shadow: 1px 1px 12px -1px #c0c0c0;
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+  #changeLang {
+    font-size: 15.5px;
+    padding: 4px 7px;
+  }
+}
+#changeLang::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 8px;
+  background-color: #000;
+  z-index: -1;
+  box-shadow: 1px 1px 12px -1px #c0c0c0;
+  transition: all 250ms;
+}
+#changeLang:hover {
+  color: #fff;
+}
+#changeLang:hover::before {
+  width: 100%;
+}

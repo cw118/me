@@ -40,9 +40,7 @@ const Nav = () => {
           <Link className={styles.profileContainer} href={lang ? '/fr' : '/'}>
             <Image id={styles.profileIcon} width={40} height={40} src="/profile.png" alt="cw118" />
           </Link>
-          <Link href={lang ? '/fr' : '/'}>
-            <a className={styles.name}>Carolyn Wu</a>
-          </Link>
+          <Link href={lang ? '/fr' : '/'} className={styles.name}>Carolyn Wu</Link>
         </div>
         <Link id={styles.changeLangLink} href={(lang ? currentRoute.replace('fr', '').replace('//', '/') : '/fr' + currentRoute)}>
           <button id={styles.changeLang}>
