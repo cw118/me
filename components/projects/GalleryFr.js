@@ -29,6 +29,24 @@ const GalleryFr = () => {
         <div className={styles.previewContainer} id={styles.mdn}></div>
       </div>
       <div className={styles.galleryItem}>
+        <ItemHeader title='Totally Mari'>
+          <Tag>Next.js</Tag>
+          <Tag>CSS</Tag>
+          <Tag>Figma</Tag>
+          <Tag>Canva</Tag>
+          <Tag>Git</Tag>
+        </ItemHeader>
+        <div className={styles.itemDescription}>
+          <p>L'application Next.js de l'équipe de robotique Marianopolis 2022-23 pour <Link href="https://robo-crc.ca/fr">la compétition CRC (AVIA 2023)</Link>. Le thème est (inspiré par) la série animée <i lang="en">Totally Spies!</i>, créée en 2001.</p>
+          <p><strong>1<sup>re</sup> place</strong> dans la catégorie <em>Conception du site web</em> + <strong>2<sup>e</sup></strong> place dans <em>Contenu du site web</em>.</p>
+        </div>
+        <div className={styles.viewOn}>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://totallymari.netlify.app/fr'>Site web</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/cw118/totallyslay'>GitHub</Link>
+        </div>
+        <div className={styles.previewContainer} id={styles.totallymari}></div>
+      </div>
+      <div className={styles.galleryItem}>
         <ItemHeader title='QUÉtudes-info'>
           <Tag>JavaScript</Tag>
           <Tag>CSS</Tag>
@@ -99,24 +117,6 @@ const GalleryFr = () => {
           <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://www.figma.com/proto/MfnXtXnFMUg5SANQFohYjj/EcoTrack'>Figma</Link>
         </div>
         <div className={styles.previewContainer} id={styles.ecotrack}></div>
-      </div>
-      <div className={styles.galleryItem}>
-        <ItemHeader title='Totally Mari'>
-          <Tag>Next.js</Tag>
-          <Tag>CSS</Tag>
-          <Tag>Figma</Tag>
-          <Tag>Canva</Tag>
-          <Tag>Git</Tag>
-        </ItemHeader>
-        <div className={styles.itemDescription}>
-          <p>L'application Next.js de l'équipe de robotique Marianopolis 2022-23 pour <Link href="https://robo-crc.ca/fr">la compétition CRC (AVIA 2023)</Link>. Le thème est (inspiré par) la série animée <i lang="en">Totally Spies!</i>, créée en 2001.</p>
-          <p><strong>1<sup>re</sup> place</strong> dans la catégorie <em>Conception du site web</em> + <strong>2<sup>e</sup></strong> place dans <em>Contenu du site web</em>.</p>
-        </div>
-        <div className={styles.viewOn}>
-          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://totallymari.netlify.app/fr'>Site web</Link>
-          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/cw118/totallyslay'>GitHub</Link>
-        </div>
-        <div className={styles.previewContainer} id={styles.totallymari}></div>
       </div>
     </div>
   );

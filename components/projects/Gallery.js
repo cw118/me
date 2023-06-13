@@ -29,6 +29,24 @@ const Gallery = () => {
         <div className={styles.previewContainer} id={styles.mdn}></div>
       </div>
       <div className={styles.galleryItem}>
+        <ItemHeader title='Totally Mari'>
+          <Tag>Next.js</Tag>
+          <Tag>CSS</Tag>
+          <Tag>Figma</Tag>
+          <Tag>Canva</Tag>
+          <Tag>Git</Tag>
+        </ItemHeader>
+        <div className={styles.itemDescription}>
+          <p>Website of the 2022-23 Marianopolis Robotics Team for the <Link href="https://robo-crc.ca">CRC Robotics Competition (AVIA 2023)</Link>. The theme is (inspired by) the show <i>Totally Spies!</i>, created in 2001.</p>
+          <p><strong>1<sup>st</sup> place</strong> in the <em>Website Design</em> category + <strong>2<sup>nd</sup></strong> place in the <em>Website Content</em> category.</p>
+        </div>
+        <div className={styles.viewOn}>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://totallymari.netlify.app'>Website</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/cw118/totallyslay'>GitHub</Link>
+        </div>
+        <div className={styles.previewContainer} id={styles.totallymari}></div>
+      </div>
+      <div className={styles.galleryItem}>
         <ItemHeader title='QUÉtudes-info'>
           <Tag>JavaScript</Tag>
           <Tag>CSS</Tag>
@@ -99,24 +117,6 @@ const Gallery = () => {
           <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://www.figma.com/proto/MfnXtXnFMUg5SANQFohYjj/EcoTrack'>Figma</Link>
         </div>
         <div className={styles.previewContainer} id={styles.ecotrack}></div>
-      </div>
-      <div className={styles.galleryItem}>
-        <ItemHeader title='Totally Mari'>
-          <Tag>Next.js</Tag>
-          <Tag>CSS</Tag>
-          <Tag>Figma</Tag>
-          <Tag>Canva</Tag>
-          <Tag>Git</Tag>
-        </ItemHeader>
-        <div className={styles.itemDescription}>
-          <p>Website of the 2022-23 Marianopolis Robotics Team for the <Link href="https://robo-crc.ca">CRC Robotics Competition (AVIA 2023)</Link>. The theme is (inspired by) the show <i>Totally Spies!</i>, created in 2001.</p>
-          <p><strong>1<sup>st</sup> place</strong> in the <em>Website Design</em> category + <strong>2<sup>nd</sup></strong> place in the <em>Website Content</em> category.</p>
-        </div>
-        <div className={styles.viewOn}>
-          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://totallymari.netlify.app'>Website</Link>
-          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/cw118/totallyslay'>GitHub</Link>
-        </div>
-        <div className={styles.previewContainer} id={styles.totallymari}></div>
       </div>
     </div>
   );
