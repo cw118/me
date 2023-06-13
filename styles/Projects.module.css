@@ -192,8 +192,11 @@
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  user-select: none;
-  column-gap: 6px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
   align-items: center;
   cursor: grab !important;
 }
@@ -204,6 +207,7 @@
 .tag {
   margin-top: 4px;
   font-size: 1.02rem;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.3rem 0.45rem;
   border-radius: 13.5px;
@@ -272,6 +276,6 @@
   background-image: url("/preview/ecotrack.png");
 }
 
-#cs50 {
-  background-image: url("/preview/cs50.png");
+#totallymari {
+  background-image: url("/preview/totallymari.png");
 }

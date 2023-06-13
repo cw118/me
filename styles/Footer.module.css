@@ -1,48 +1,4 @@
-/* Gray */
-/* navlink active */
-/* navlink hover */
-/* navbar/footer bg */
-/* Blue */
-/* footer line break */
-/* Indigo */
-/* Orange */
-/* Turquoise */
-/* Violet */
-/* Goldenrod */
-/* Pink */
-/* Red */
-/* Other/special */
-/* site is mobile first
- * mobile design/layout is coded first
- */
-/* media queries */
-/* margin */
-/* main nav dimensions */
-/* footer height */
-/* z-index */
-/* font sizes and line heights */
-/* usually 16px */
-/* for tablet and desktop, 18px */
-/* mobile typescale based on major second scale (base of 100%)
- * see/try it on type-scale.com
- */
-/* 28.83px */
-/* 18.00px */
-/* tablet and desktop typescale based on perfect fourth */
-/* 54.93px */
-/* 22.50px */
-/* 16px */
-/* very light gray */ /* Styles/mixins for buttons */
-.footerContainer {
-  position: relative;
-  z-index: 9999;
-}
-
 .footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   background-color: #333333;
@@ -52,6 +8,7 @@
   padding: 1.2rem;
   font-size: 1.125rem;
   text-align: center;
+  z-index: 9999;
 }
 @media screen and (min-width: 335px) {
   .footer {

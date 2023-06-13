@@ -101,24 +101,22 @@ const Gallery = () => {
         <div className={styles.previewContainer} id={styles.ecotrack}></div>
       </div>
       <div className={styles.galleryItem}>
-        <ItemHeader title='CS50 (Harvard)'>
-          <Tag>C</Tag>
-          <Tag>Python</Tag>
-          <Tag>SQL</Tag>
-          <Tag>Flask</Tag>
-          <Tag>Bootstrap</Tag>
-          <Tag>HTML</Tag>
+        <ItemHeader title='Totally Mari'>
+          <Tag>Next.js</Tag>
           <Tag>CSS</Tag>
-          <Tag>JavaScript</Tag>
+          <Tag>Figma</Tag>
+          <Tag>Canva</Tag>
+          <Tag>Git</Tag>
         </ItemHeader>
         <div className={styles.itemDescription}>
-          <p>A challenging but rewarding MOOC*. CS50 was one of my starting points in the computer science industry, having taught me the basics of programming and computational thinking. Thanks to this course, I found a real passion for technology.</p>
-          <p><i>*MOOC = Massive Open Online Course</i></p>
+          <p>Website of the 2022-23 Marianopolis Robotics Team for the <Link href="https://robo-crc.ca">CRC Robotics Competition (AVIA 2023)</Link>. The theme is (inspired by) the show <i>Totally Spies!</i>, created in 2001.</p>
+          <p><strong>1<sup>st</sup> place</strong> in the <em>Website Design</em> category + <strong>2<sup>nd</sup></strong> place in the <em>Website Content</em> category.</p>
         </div>
         <div className={styles.viewOn}>
-          <Link className={styles.viewOnLink} href='https://cs50.harvard.edu/x/'>CS50x</Link>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://totallymari.netlify.app'>Website</Link>
+          <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/cw118/totallyslay'>GitHub</Link>
         </div>
-        <div className={styles.previewContainer} id={styles.cs50}></div>
+        <div className={styles.previewContainer} id={styles.totallymari}></div>
       </div>
     </div>
   );

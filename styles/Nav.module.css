@@ -1,39 +1,3 @@
-/* Gray */
-/* navlink active */
-/* navlink hover */
-/* navbar/footer bg */
-/* Blue */
-/* footer line break */
-/* Indigo */
-/* Orange */
-/* Turquoise */
-/* Violet */
-/* Goldenrod */
-/* Pink */
-/* Red */
-/* Other/special */
-/* site is mobile first
- * mobile design/layout is coded first
- */
-/* media queries */
-/* margin */
-/* main nav dimensions */
-/* footer height */
-/* z-index */
-/* font sizes and line heights */
-/* usually 16px */
-/* for tablet and desktop, 18px */
-/* mobile typescale based on major second scale (base of 100%)
- * see/try it on type-scale.com
- */
-/* 28.83px */
-/* 18.00px */
-/* tablet and desktop typescale based on perfect fourth */
-/* 54.93px */
-/* 22.50px */
-/* 16px */
-/* very light gray */
-/* Styles/mixins for buttons */
 .topnav {
   background-color: #333333;
   color: #fff;
@@ -158,8 +122,7 @@
 }
 @media screen and (pointer: fine) {
   .navLinks {
-    padding-right: 14px;
-    /* account for (partial) width of scrollbar */
+    padding-right: 14px; /* account for (partial) width of scrollbar */
   }
 }
 
@@ -238,7 +201,6 @@
   position: relative;
   font-family: inherit;
   font-size: 17px;
-  -webkit-box-shadow: 1px 1px 12px -1px #c0c0c0;
   box-shadow: 1px 1px 12px -1px #c0c0c0;
   transition: all 250ms;
   overflow: hidden;
@@ -260,7 +222,6 @@
   border-radius: 8px;
   background-color: #000;
   z-index: -1;
-  -webkit-box-shadow: 1px 1px 12px -1px #c0c0c0;
   box-shadow: 1px 1px 12px -1px #c0c0c0;
   transition: all 250ms;
 }
