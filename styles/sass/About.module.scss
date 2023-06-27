@@ -167,10 +167,6 @@
   color: $white;
 }
 
-#enCard {
-  background-color: #ffff99;
-}
-
 #frCard {
   background-color: #9fdf9f;
 }
@@ -178,6 +174,10 @@
 #zhCard {
   background-color: #800040;
   color: $white;
+}
+
+#deCard {
+  background-color: #fff788;
 }
 
 #ruCard {
@@ -200,19 +200,23 @@
   fill: #5405ad;
 }
 
+#svelteLogo {
+  fill: #ff4000;
+}
+
 #reactLogo {
   fill: #00d8ff;
+}
+
+#phpLogo {
+  fill: #9ca3c9;
 }
 
 #pythonLogo {
   user-select: none;
 }
 
-#flaskLogo {
-  fill: $black;
-}
-
-#nextLogo {
+#flaskLogo, #nextLogo {
   fill: $black;
 }
 
@@ -228,10 +232,6 @@
   fill: #26004d;
 }
 
-#autocadLogo {
-  fill: $white;
-}
-
-#markdownLogo {
+#autocadLogo, #markdownLogo {
   fill: $white;
 }

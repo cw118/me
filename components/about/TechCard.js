@@ -1,10 +1,7 @@
 import styles from '../../styles/About.module.css';
 import Image from 'next/image';
 import { SiGit, SiGithub, SiCanva, SiAutodesk, SiMarkdown } from 'react-icons/si';
-import { RiEnglishInput } from 'react-icons/ri';
-import { BsTranslate } from 'react-icons/bs';
 import { MdOutlineLanguage } from 'react-icons/md';
-import { TbMessageLanguage } from 'react-icons/tb';
 
 export const FigmaCard = () => {
   return (
@@ -90,7 +87,7 @@ export const MarkdownCard = () => {
 export const EnCard = () => {
   return (
     <div className={styles.techCard} id={styles.enCard}>
-      <RiEnglishInput size={36} />
+      <MdOutlineLanguage size={38} />
       <h3 className={styles.techCardLabel}>English</h3>
     </div>
   );
@@ -108,8 +105,17 @@ export const FrCard = () => {
 export const ZhCard = () => {
   return (
     <div className={styles.techCard} id={styles.zhCard}>
-      <BsTranslate size={38} />
+      <MdOutlineLanguage size={38} />
       <h3 className={styles.techCardLabel}>中文</h3>
+    </div>
+  );
+}
+
+export const DeCard = () => {
+  return (
+    <div className={styles.techCard} id={styles.deCard}>
+      <MdOutlineLanguage size={38} />
+      <h3 className={styles.techCardLabel}>Deutsch</h3>
     </div>
   );
 }
@@ -117,7 +123,7 @@ export const ZhCard = () => {
 export const RuCard = () => {
   return (
     <div className={styles.techCard} id={styles.ruCard}>
-      <TbMessageLanguage size={37} />
+      <MdOutlineLanguage size={38} />
       <h3 className={styles.techCardLabel}>Русский</h3>
     </div>
   );

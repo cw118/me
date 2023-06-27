@@ -1,3 +1,38 @@
+/* Gray */
+/* navlink active */
+/* navlink hover */
+/* navbar/footer bg */
+/* Blue */
+/* footer line break */
+/* Indigo */
+/* Orange */
+/* Turquoise */
+/* Violet */
+/* Goldenrod */
+/* Pink */
+/* Red */
+/* Other/special */
+/* site is mobile first
+ * mobile design/layout is coded first
+ */
+/* media queries */
+/* margin */
+/* main nav dimensions */
+/* footer height */
+/* z-index */
+/* font sizes and line heights */
+/* usually 16px */
+/* for tablet and desktop, 18px */
+/* mobile typescale based on major second scale (base of 100%)
+ * see/try it on type-scale.com
+ */
+/* 28.83px */
+/* 18.00px */
+/* tablet and desktop typescale based on perfect fourth */
+/* 54.93px */
+/* 22.50px */
+/* 16px */
+/* very light gray */ /* Styles/mixins for buttons */
 #hero {
   background-color: #ffcc99;
 }
@@ -153,10 +188,6 @@
   color: #fff;
 }
 
-#enCard {
-  background-color: #ffff99;
-}
-
 #frCard {
   background-color: #9fdf9f;
 }
@@ -164,6 +195,10 @@
 #zhCard {
   background-color: #800040;
   color: #fff;
+}
+
+#deCard {
+  background-color: #fff788;
 }
 
 #ruCard {
@@ -186,8 +221,16 @@
   fill: #5405ad;
 }
 
+#svelteLogo {
+  fill: #ff4000;
+}
+
 #reactLogo {
   fill: #00d8ff;
+}
+
+#phpLogo {
+  fill: #9ca3c9;
 }
 
 #pythonLogo {
@@ -196,11 +239,7 @@
           user-select: none;
 }
 
-#flaskLogo {
-  fill: #000;
-}
-
-#nextLogo {
+#flaskLogo, #nextLogo {
   fill: #000;
 }
 
@@ -216,10 +255,6 @@
   fill: #26004d;
 }
 
-#autocadLogo {
-  fill: #fff;
-}
-
-#markdownLogo {
+#autocadLogo, #markdownLogo {
   fill: #fff;
 }

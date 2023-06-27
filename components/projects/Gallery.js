@@ -48,10 +48,13 @@ const Gallery = () => {
       </div>
       <div className={styles.galleryItem}>
         <ItemHeader title='QUÉtudes-info'>
+          <Tag>Svelte(Kit)</Tag>
           <Tag>JavaScript</Tag>
+          <Tag>SEO</Tag>
           <Tag>CSS</Tag>
           <Tag>HTML</Tag>
-          <Tag>Bootstrap&nbsp;4</Tag>
+          <Tag>Bootstrap</Tag>
+          <Tag>Git</Tag>
           <Tag>CS50</Tag>
         </ItemHeader>
         <div className={styles.itemDescription}>
@@ -59,7 +62,7 @@ const Gallery = () => {
           <p><i>All are welcome to <Link href='https://github.com/cw118/quetudesinfo/compare'>make a contribution</Link> through the GitHub repository <Link href='https://github.com/cw118/quetudesinfo'>cw118/quetudesinfo</Link>!</i></p>
         </div>
         <div className={styles.viewOn}>
-          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://cw118.github.io/quetudesinfo'>QUÉtudes-info</Link>
+          <Link className={`${styles.viewOnLink} ${styles.leftLink}`} href='https://quetudesinfo.vercel.app'>QUÉtudes-info</Link>
           <Link className={`${styles.viewOnLink} ${styles.rightLink}`} href='https://github.com/cw118/quetudesinfo'>GitHub</Link>
         </div>
         <div className={styles.previewContainer} id={styles.quetudesinfo}></div>

@@ -1,6 +1,6 @@
 import styles from '../../styles/About.module.css';
 import Image from 'next/image';
-import { SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiFlask, SiReact, SiNextdotjs } from 'react-icons/si';
+import { SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiSvelte, SiPhp, SiFlask, SiReact, SiNextdotjs } from 'react-icons/si';
 
 export const HTMLCard = () => {
   return (
@@ -55,6 +55,15 @@ export const BootstrapCard = () => {
     </div>
   );
 }
+
+export const SvelteCard = () => {
+  return (
+    <div className={styles.codeCard}>
+      <SiSvelte id={styles.svelteLogo} size={95} />
+      <h3 className={styles.codeCardLabel}>Svelte</h3>
+    </div>
+  );
+}
  
 export const ReactCard = () => {
   return (
@@ -65,6 +74,15 @@ export const ReactCard = () => {
   );
 }
  
+export const PhpCard = () => {
+  return (
+    <div className={styles.codeCard}>
+      <SiPhp id={styles.phpLogo} size={95} />
+      <h3 className={styles.codeCardLabel}>PHP</h3>
+    </div>
+  );
+}
+
 export const CCard = () => {
   return (
     <div className={styles.codeCard}>
