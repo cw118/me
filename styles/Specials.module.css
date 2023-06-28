@@ -4,7 +4,7 @@
   border-bottom: solid #fff 2px;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   font-size: 1.6rem;
   letter-spacing: 0.2px;
   font-weight: bold;
@@ -71,7 +71,7 @@
 }
 
 .checkerboard {
-  width: 100vw;
+  width: 100%;
   background-color: #d9f2d9;
   box-shadow: #000 0px 3px 8px;
   display: grid;

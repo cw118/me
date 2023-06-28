@@ -4,7 +4,7 @@
   border-bottom: solid #fff 2px;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   font-size: 1.125rem;
   font-weight: bold;
   z-index: 999;
