@@ -145,6 +145,15 @@
   background-color: $pastelpink-200;
 }
 
+#wordpressCard {
+  background: #0073aa;
+  color: $white;
+}
+
+#apacheCard {
+  background: #a6a3db;
+}
+
 #dokuwikiCard {
   background-color: $blue-200;
 }
@@ -176,12 +185,8 @@
   color: $white;
 }
 
-#deCard {
-  background-color: #fff788;
-}
-
 #ruCard {
-  background-color: #d6d6c2;
+  background-color: #fff788;
 }
 
 #jsLogo {
@@ -220,8 +225,12 @@
   fill: $black;
 }
 
-#githubLogo {
+#githubLogo, #autocadLogo, #markdownLogo, #wordpressLogo {
   fill: $white;
+}
+
+#mySqlLogo {
+  fill: #c6dcec;
 }
 
 #gitLogo {
@@ -232,6 +241,6 @@
   fill: #26004d;
 }
 
-#autocadLogo, #markdownLogo {
-  fill: $white;
+#apacheLogo {
+  fill: #7f1a4b;
 }

@@ -1,6 +1,6 @@
 import styles from '../../styles/About.module.css';
 import Image from 'next/image';
-import { SiGit, SiGithub, SiCanva, SiAutodesk, SiMarkdown } from 'react-icons/si';
+import { SiGit, SiGithub, SiCanva, SiAutodesk, SiMarkdown, SiWordpress, SiApache } from 'react-icons/si';
 import { MdOutlineLanguage } from 'react-icons/md';
 
 export const FigmaCard = () => {
@@ -35,6 +35,24 @@ export const CanvaCard = () => {
     <div className={styles.techCard} id={styles.canvaCard}>
       <SiCanva id={styles.canvaLogo} size={50} />
       <h3 className={styles.techCardLabel}>Canva</h3>
+    </div>
+  );
+}
+ 
+export const WordpressCard = () => {
+  return (
+    <div className={styles.techCard} id={styles.wordpressCard}>
+      <SiWordpress size={50} />
+      <h3 className={styles.techCardLabel}>Wordpress</h3>
+    </div>
+  );
+}
+ 
+export const ApacheCard = () => {
+  return (
+    <div className={styles.techCard} id={styles.apacheCard}>
+      <SiApache id={styles.apacheLogo} size={50} />
+      <h3 className={styles.techCardLabel}>Apache</h3>
     </div>
   );
 }
@@ -107,15 +125,6 @@ export const ZhCard = () => {
     <div className={styles.techCard} id={styles.zhCard}>
       <MdOutlineLanguage size={38} />
       <h3 className={styles.techCardLabel}>中文</h3>
-    </div>
-  );
-}
-
-export const DeCard = () => {
-  return (
-    <div className={styles.techCard} id={styles.deCard}>
-      <MdOutlineLanguage size={38} />
-      <h3 className={styles.techCardLabel}>Deutsch</h3>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import styles from '../../styles/About.module.css';
 import Image from 'next/image';
-import { SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiSvelte, SiPhp, SiFlask, SiReact, SiNextdotjs } from 'react-icons/si';
+import { SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiSvelte, SiPhp, SiMysql, SiFlask, SiReact, SiNextdotjs } from 'react-icons/si';
 
 export const HTMLCard = () => {
   return (
@@ -119,16 +119,16 @@ export const FlaskCard = () => {
   );
 }
  
-export const SQLCard = () => {
+export const MySQLCard = () => {
   return (
     <div className={styles.codeCard}>
-      <Image src='/icons/sqlLogo.svg' alt='SQL logo' width={100} height={100} draggable='false' />
-      <h3 className={styles.codeCardLabel}>SQL</h3>
+      <SiMysql id={styles.mySqlLogo} size={95} />
+      <h3 className={styles.codeCardLabel}>MySQL</h3>
     </div>
   );
 }
  
-export const NextJSCard = () => {
+export const NextjsCard = () => {
   return (
     <div className={styles.codeCard}>
       <SiNextdotjs id={styles.nextLogo} size={95} />
