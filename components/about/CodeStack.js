@@ -1,4 +1,4 @@
-import { HTMLCard, CSSCard, JSCard, SassCard, TailwindCard, BootstrapCard, SvelteCard, ReactCard, PhpCard, CCard, PythonCard, FlaskCard, MySQLCard, NextjsCard } from './CodeCard';
+import { HTMLCard, CSSCard, JSCard, TSCard, SassCard, TailwindCard, BootstrapCard, SvelteCard, ReactCard, PhpCard, CppCard, PythonCard, TFCard, KerasCard, FlaskCard, MySQLCard, NextjsCard } from './CodeCard';
 import styles from '../../styles/About.module.css';
 import { useRef } from 'react';
 import { useDraggable } from 'react-use-draggable-scroll';
@@ -16,6 +16,7 @@ const CodeStack = ({ lang }) => {
         <HTMLCard />
         <CSSCard />
         <JSCard />
+        <TSCard />
         <SassCard />
         <TailwindCard />
         <BootstrapCard />
@@ -25,8 +26,10 @@ const CodeStack = ({ lang }) => {
         <PhpCard />
         <MySQLCard />
 
-        <CCard />
+        <CppCard />
         <PythonCard />
+        <TFCard />
+        <KerasCard />
         <FlaskCard />
       </div>
     </>

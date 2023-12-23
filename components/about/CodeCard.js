@@ -1,6 +1,6 @@
 import styles from '../../styles/About.module.css';
 import Image from 'next/image';
-import { SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiSvelte, SiPhp, SiMysql, SiFlask, SiReact, SiNextdotjs } from 'react-icons/si';
+import { SiJavascript, SiSass, SiTailwindcss, SiBootstrap, SiSvelte, SiPhp, SiMysql, SiFlask, SiReact, SiNextdotjs, SiTensorflow, SiKeras } from 'react-icons/si';
 
 export const HTMLCard = () => {
   return (
@@ -25,6 +25,15 @@ export const JSCard = () => {
     <div className={styles.codeCard}>
       <SiJavascript id={styles.jsLogo} size={95} />
       <h3 className={styles.codeCardLabel}>JS</h3>
+    </div>
+  );
+}
+ 
+export const TSCard = () => {
+  return (
+    <div className={styles.codeCard}>
+      <Image src='/icons/tsLogo.svg' id={styles.tsLogo} alt='TypeScript logo' width={100} height={100} />
+      <h3 className={styles.codeCardLabel}>TS</h3>
     </div>
   );
 }
@@ -106,6 +115,24 @@ export const PythonCard = () => {
     <div className={styles.codeCard}>
       <Image src='/icons/pythonLogo.svg' id={styles.pythonLogo} width={100} height={100} alt='Python logo' draggable='false' />
       <h3 className={styles.codeCardLabel}>Python</h3>
+    </div>
+  );
+}
+ 
+export const TFCard = () => {
+  return (
+    <div className={styles.codeCard}>
+      <SiTensorflow id={styles.tfLogo} size={95} draggable='false' />
+      <h3 className={styles.codeCardLabel}>TensorFlow</h3>
+    </div>
+  );
+}
+ 
+export const KerasCard = () => {
+  return (
+    <div className={styles.codeCard}>
+      <SiKeras id={styles.kerasLogo} size={95} draggable='false' />
+      <h3 className={styles.codeCardLabel}>Keras</h3>
     </div>
   );
 }

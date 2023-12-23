@@ -1,6 +1,6 @@
 import styles from '../../styles/About.module.css';
 import Image from 'next/image';
-import { SiGit, SiGithub, SiCanva, SiAutodesk, SiMarkdown, SiWordpress, SiApache } from 'react-icons/si';
+import { SiGit, SiGithub, SiCanva, SiInkscape, SiAutodesk, SiMarkdown, SiWordpress, SiApache } from 'react-icons/si';
 import { MdOutlineLanguage } from 'react-icons/md';
 
 export const FigmaCard = () => {
@@ -35,6 +35,15 @@ export const CanvaCard = () => {
     <div className={styles.techCard} id={styles.canvaCard}>
       <SiCanva id={styles.canvaLogo} size={50} />
       <h3 className={styles.techCardLabel}>Canva</h3>
+    </div>
+  );
+}
+ 
+export const InkscapeCard = () => {
+  return (
+    <div className={styles.techCard} id={styles.inkscapeCard}>
+      <SiInkscape id={styles.inkscapeLogo} size={50} />
+      <h3 className={styles.techCardLabel}>Inkscape</h3>
     </div>
   );
 }
