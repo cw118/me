@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.socials}><Link href='https://github.com/cw118'><FaGithub />&nbsp;<span>GitHub (@cw118)</span></Link></div>
       <div className={styles.line}></div>
-      <div className={styles.copyright}>&#169; 2022-23 Carolyn Wu. {allRights}.</div>
+      <div className={styles.copyright}>&#169; 2022-{new Date().getFullYear()} Carolyn Wu. {allRights}.</div>
     </footer>
   );
 }
